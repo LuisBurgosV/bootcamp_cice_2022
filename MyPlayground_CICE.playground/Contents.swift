@@ -161,7 +161,14 @@ func funcionConParametros(mensaje: String) {
     print(mensaje)
 }
 
-funcionConParametros(mensaje: "Hola Andres")
+funcionConParametros(mensaje: "Hola Andres de nuevo")
+
+func numerosSecuencia(_ a: Int, _ b:Int, _ c: Int) -> Int {
+    (a*b)+c
+}
+
+let auxDis = numerosSecuencia(2,3,4)
+print (auxDis)
 
 
 
