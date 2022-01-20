@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MyFirstApp
+//  MiAppAlertas
 //
-//  Created by Luis Burgos on 16/1/22.
+//  Created by Luis Burgos on 20/1/22.
 //
 
 import UIKit
