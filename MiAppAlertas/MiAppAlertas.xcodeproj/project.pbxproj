@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B11D429279C1149000E48CD /* SegundaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11D428279C1149000E48CD /* SegundaViewController.swift */; };
+		0B11D42C279C1785000E48CD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11D42B279C1785000E48CD /* Utils.swift */; };
 		0BE36B3F279A0F8B001F0077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE36B3E279A0F8B001F0077 /* AppDelegate.swift */; };
 		0BE36B41279A0F8B001F0077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE36B40279A0F8B001F0077 /* SceneDelegate.swift */; };
 		0BE36B46279A0F8B001F0077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE36B44279A0F8B001F0077 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0B11D428279C1149000E48CD /* SegundaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegundaViewController.swift; sourceTree = "<group>"; };
+		0B11D42B279C1785000E48CD /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0BE36B3B279A0F8B001F0077 /* MiAppAlertas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiAppAlertas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE36B3E279A0F8B001F0077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE36B40279A0F8B001F0077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		0B11D42A279C13FD000E48CD /* Utils+Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0B11D42B279C1785000E48CD /* Utils.swift */,
 			);
 			name = "Utils+Helpers";
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				0BE36B5A279A10B6001F0077 /* NavigationViewController.swift in Sources */,
 				0BE36B58279A1081001F0077 /* InitialViewController.swift in Sources */,
 				0BE36B5C279A10C5001F0077 /* PresentViewController.swift in Sources */,
+				0B11D42C279C1785000E48CD /* Utils.swift in Sources */,
 				0BE36B3F279A0F8B001F0077 /* AppDelegate.swift in Sources */,
 				0B11D429279C1149000E48CD /* SegundaViewController.swift in Sources */,
 				0BE36B41279A0F8B001F0077 /* SceneDelegate.swift in Sources */,
