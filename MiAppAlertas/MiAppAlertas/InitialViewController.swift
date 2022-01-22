@@ -19,7 +19,7 @@ class InitialViewController: UIViewController {
                                                         preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-                let storyboardNavigationViewController = self.storyboard?.instantiateViewController(identifier: "NavigationViewController")
+                let storyboardNavigationViewController = self.storyboard?.instantiateViewController(identifier: "InitialViewController")
                 if let vc = storyboardNavigationViewController {
                     self.show(vc, sender: nil)
                 }
