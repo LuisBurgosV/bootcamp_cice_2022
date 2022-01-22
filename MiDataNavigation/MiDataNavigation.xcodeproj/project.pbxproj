@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		0B11D43A279C2346000E48CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11D439279C2346000E48CD /* AppDelegate.swift */; };
 		0B11D43C279C2346000E48CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11D43B279C2346000E48CD /* SceneDelegate.swift */; };
-		0B11D43E279C2346000E48CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11D43D279C2346000E48CD /* ViewController.swift */; };
 		0B11D441279C2346000E48CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B11D43F279C2346000E48CD /* Main.storyboard */; };
 		0B11D443279C2348000E48CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B11D442279C2348000E48CD /* Assets.xcassets */; };
 		0B11D446279C2348000E48CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B11D444279C2348000E48CD /* LaunchScreen.storyboard */; };
+		0B11D450279C283F000E48CD /* PrimeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11D44F279C283F000E48CD /* PrimeraViewController.swift */; };
+		0B11D452279C2F9A000E48CD /* SegundaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11D451279C2F9A000E48CD /* SegundaViewController.swift */; };
+		0B11D454279C2FA8000E48CD /* TerceraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11D453279C2FA8000E48CD /* TerceraViewController.swift */; };
+		0B11D456279C2FB2000E48CD /* CuartaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11D455279C2FB2000E48CD /* CuartaViewController.swift */; };
+		0B11D459279C5098000E48CD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11D458279C5098000E48CD /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B11D436279C2346000E48CD /* MiDataNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiDataNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B11D439279C2346000E48CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B11D43B279C2346000E48CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B11D43D279C2346000E48CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B11D440279C2346000E48CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B11D442279C2348000E48CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B11D445279C2348000E48CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B11D447279C2348000E48CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B11D44F279C283F000E48CD /* PrimeraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeraViewController.swift; sourceTree = "<group>"; };
+		0B11D451279C2F9A000E48CD /* SegundaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegundaViewController.swift; sourceTree = "<group>"; };
+		0B11D453279C2FA8000E48CD /* TerceraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerceraViewController.swift; sourceTree = "<group>"; };
+		0B11D455279C2FB2000E48CD /* CuartaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuartaViewController.swift; sourceTree = "<group>"; };
+		0B11D458279C5098000E48CD /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		0B11D438279C2346000E48CD /* MiDataNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				0B11D439279C2346000E48CD /* AppDelegate.swift */,
-				0B11D43B279C2346000E48CD /* SceneDelegate.swift */,
-				0B11D43D279C2346000E48CD /* ViewController.swift */,
+				0B11D457279C4FF1000E48CD /* Utils+Helpers */,
+				0B11D44E279C2777000E48CD /* Source */,
+				0B11D44D279C276B000E48CD /* CoreApp */,
 				0B11D43F279C2346000E48CD /* Main.storyboard */,
 				0B11D442279C2348000E48CD /* Assets.xcassets */,
 				0B11D444279C2348000E48CD /* LaunchScreen.storyboard */,
 				0B11D447279C2348000E48CD /* Info.plist */,
 			);
 			path = MiDataNavigation;
+			sourceTree = "<group>";
+		};
+		0B11D44D279C276B000E48CD /* CoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				0B11D439279C2346000E48CD /* AppDelegate.swift */,
+				0B11D43B279C2346000E48CD /* SceneDelegate.swift */,
+			);
+			path = CoreApp;
+			sourceTree = "<group>";
+		};
+		0B11D44E279C2777000E48CD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0B11D44F279C283F000E48CD /* PrimeraViewController.swift */,
+				0B11D451279C2F9A000E48CD /* SegundaViewController.swift */,
+				0B11D453279C2FA8000E48CD /* TerceraViewController.swift */,
+				0B11D455279C2FB2000E48CD /* CuartaViewController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0B11D457279C4FF1000E48CD /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0B11D458279C5098000E48CD /* Utils.swift */,
+			);
+			path = "Utils+Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B11D43E279C2346000E48CD /* ViewController.swift in Sources */,
+				0B11D454279C2FA8000E48CD /* TerceraViewController.swift in Sources */,
+				0B11D452279C2F9A000E48CD /* SegundaViewController.swift in Sources */,
+				0B11D456279C2FB2000E48CD /* CuartaViewController.swift in Sources */,
+				0B11D459279C5098000E48CD /* Utils.swift in Sources */,
+				0B11D450279C283F000E48CD /* PrimeraViewController.swift in Sources */,
 				0B11D43A279C2346000E48CD /* AppDelegate.swift in Sources */,
 				0B11D43C279C2346000E48CD /* SceneDelegate.swift in Sources */,
 			);
