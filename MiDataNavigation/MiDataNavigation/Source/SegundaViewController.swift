@@ -32,6 +32,7 @@ class SegundaViewController: UIViewController {
         if let edadPerroUnw = self.edadPerro {
             self.nuevaEdadPerro = edadPerroUnw * 7
             self.present(Utils.shared.showAlertVC(title: "Edad de mi perro", message: "El calculo de la edad de mi perro es: \(self.nuevaEdadPerro ?? 0)"), animated: true, completion: nil)
+            self.calcularEdadPerroTF.text = String(nuevaEdadPerro ?? 0)
         }else{
             self.present(Utils.shared.showAlertVC(title: "Estimado usuario", message: "Por favor introduce la edad de tu perro para calcularla"), animated: true, completion: nil)
         }
@@ -56,9 +57,11 @@ class SegundaViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueV3" {
             
-            if !(self.miTelefonoTF.text?.isEmpty ?? false) && !(self.miDireccionTF.text?.isEmpty ?? false) && (self.calcularEdadPerroTF.text != String(self.nuevaEdadPerro ?? 0)) {
+            if !(self.miTelefonoTF.text?.isEmpty ?? false) && !(self.miDireccionTF.text?.isEmpty ?? false) && (self.calcularEdadPerroTF.text == String(self.nuevaEdadPerro ?? 0)) {
                 
-                let ventana3VC = segue.destination as! SegundaViewController
+                let ventana3VC = segue.destination as! TerceraViewController
+                ventana3VC.datosUsuario.nombreData = self.datosUsuario.nombreData
+                ventana3VC.datosUsuario.apellidoData = self.datosUsuario.apellidoData
                 ventana3VC.datosUsuario.telefonoData = self.miTelefonoTF.text
                 ventana3VC.datosUsuario.direccionData = self.miDireccionTF.text
                 ventana3VC.datosUsuario.edadPerroData = self.calcularEdadPerroTF.text
@@ -68,17 +71,9 @@ class SegundaViewController: UIViewController {
             }
         }
     }
-
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    */
 
 }

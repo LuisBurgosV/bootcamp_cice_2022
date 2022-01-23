@@ -85,7 +85,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-JI-c3d">
                                 <rect key="frame" x="20" y="190" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direccion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5RA-Cv-YFT">
                                 <rect key="frame" x="20" y="244" width="374" height="34"/>
@@ -95,7 +95,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calcula la edad de tu perro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oad-2E-rnR">
                                 <rect key="frame" x="20" y="298" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVI-sp-jNK">
                                 <rect key="frame" x="20" y="362" width="374" height="30"/>
@@ -228,7 +228,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ocR-OG-uGG" kind="show" id="fQb-3k-YC6"/>
+                                    <segue destination="ocR-OG-uGG" kind="show" identifier="segueV4" id="fQb-3k-YC6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -265,6 +265,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ventana 3" id="IlC-tI-u5A"/>
+                    <connections>
+                        <outlet property="ciudadTF" destination="HM2-VI-l3F" id="RxK-9B-EXV"/>
+                        <outlet property="codigoPostalTF" destination="5tw-DM-Uv1" id="rpJ-nL-7fK"/>
+                        <outlet property="edadPerroLBL" destination="Eel-xS-fgi" id="kXC-rG-Du0"/>
+                        <outlet property="miApellidoLBL" destination="YAv-5D-qsY" id="BFJ-1u-dmv"/>
+                        <outlet property="miDireccionLBL" destination="I3U-d0-Lsf" id="rff-Ve-JF3"/>
+                        <outlet property="miNombreLBL" destination="Hc9-v5-wzJ" id="FSv-to-DDK"/>
+                        <outlet property="miTelefonoLBL" destination="IJB-GX-aCV" id="7Qm-RQ-fJv"/>
+                        <outlet property="posicionGeograficaTF" destination="JhJ-Of-DnL" id="hop-sQ-rvf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIo-5y-Ljh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,6 +336,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irr-D5-9RT">
+                                <rect key="frame" x="20" y="446" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Enviar mail con todo">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="enviarMailACTION:" destination="ocR-OG-uGG" eventType="touchUpInside" id="wPJ-6L-Ogb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hKO-iY-PgI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -338,13 +358,16 @@
                             <constraint firstItem="rE1-y6-s3S" firstAttribute="leading" secondItem="hKO-iY-PgI" secondAttribute="leading" constant="20" id="Gbz-qd-N8v"/>
                             <constraint firstItem="hKO-iY-PgI" firstAttribute="trailing" secondItem="vdu-wI-Wfv" secondAttribute="trailing" constant="20" id="LFB-hx-0dr"/>
                             <constraint firstItem="hKO-iY-PgI" firstAttribute="trailing" secondItem="bpB-h9-XdD" secondAttribute="trailing" constant="20" id="MSt-j1-CTs"/>
+                            <constraint firstItem="irr-D5-9RT" firstAttribute="leading" secondItem="hKO-iY-PgI" secondAttribute="leading" constant="20" id="Md9-Os-Uqy"/>
                             <constraint firstItem="msa-Oi-F9g" firstAttribute="top" secondItem="vfb-pk-RH5" secondAttribute="bottom" constant="20" id="Owa-Jm-bXM"/>
                             <constraint firstItem="pip-eQ-em6" firstAttribute="leading" secondItem="hKO-iY-PgI" secondAttribute="leading" constant="20" id="Qfi-TP-caT"/>
+                            <constraint firstItem="irr-D5-9RT" firstAttribute="top" secondItem="pip-eQ-em6" secondAttribute="bottom" constant="30" id="So8-xT-I2Q"/>
                             <constraint firstItem="pip-eQ-em6" firstAttribute="top" secondItem="rE1-y6-s3S" secondAttribute="bottom" constant="20" id="THX-MG-TBr"/>
                             <constraint firstItem="rE1-y6-s3S" firstAttribute="top" secondItem="4zV-Og-UPj" secondAttribute="bottom" constant="20" id="Ta6-mr-OXk"/>
                             <constraint firstItem="hKO-iY-PgI" firstAttribute="trailing" secondItem="msa-Oi-F9g" secondAttribute="trailing" constant="20" id="Uds-dE-A3q"/>
                             <constraint firstItem="wFH-iw-Hox" firstAttribute="top" secondItem="bpB-h9-XdD" secondAttribute="bottom" constant="20" id="VQu-7t-LM3"/>
                             <constraint firstItem="wFH-iw-Hox" firstAttribute="leading" secondItem="hKO-iY-PgI" secondAttribute="leading" constant="20" id="ZU3-yl-V27"/>
+                            <constraint firstItem="hKO-iY-PgI" firstAttribute="trailing" secondItem="irr-D5-9RT" secondAttribute="trailing" constant="20" id="coT-6J-U3c"/>
                             <constraint firstItem="4zV-Og-UPj" firstAttribute="top" secondItem="vdu-wI-Wfv" secondAttribute="bottom" constant="20" id="coq-LR-BK6"/>
                             <constraint firstItem="vfb-pk-RH5" firstAttribute="leading" secondItem="hKO-iY-PgI" secondAttribute="leading" constant="20" id="cz0-cw-dSD"/>
                             <constraint firstItem="vdu-wI-Wfv" firstAttribute="leading" secondItem="hKO-iY-PgI" secondAttribute="leading" constant="20" id="d1D-xV-BEc"/>
@@ -357,8 +380,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ventana 4" id="ix5-eD-rF2">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="ULk-JO-fMe"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="ULk-JO-fMe">
+                            <connections>
+                                <action selector="logoutButtonACTION:" destination="ocR-OG-uGG" id="nGc-KT-MnJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="codigoPostalLBL" destination="4zV-Og-UPj" id="vA5-HP-0gl"/>
+                        <outlet property="edadPerroLBL" destination="vdu-wI-Wfv" id="p9F-PA-tjR"/>
+                        <outlet property="miApellidoLBL" destination="wFH-iw-Hox" id="EX8-6j-aBZ"/>
+                        <outlet property="miCiudadLBL" destination="rE1-y6-s3S" id="JeW-a8-IGW"/>
+                        <outlet property="miDireccionLBL" destination="msa-Oi-F9g" id="3og-dK-hJu"/>
+                        <outlet property="miNombreLBL" destination="bpB-h9-XdD" id="hdl-Qk-bsJ"/>
+                        <outlet property="miTelefonoLBL" destination="vfb-pk-RH5" id="ccS-Lk-Noo"/>
+                        <outlet property="posicionGeograficaLBL" destination="pip-eQ-em6" id="2jb-Dj-ocl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gy-5M-AR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

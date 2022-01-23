@@ -23,6 +23,20 @@ class Utils {
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         return alertVC
     }
+    
+    func configuracionPickerView(tag: Int,
+                                 delegate: UIPickerViewDelegate,
+                                 dataSource: UIPickerViewDataSource,
+                                 textField: UITextField,
+                                 dataArray: [String]){
+        
+        let pickerView = UIPickerView()
+        pickerView.delegate = delegate
+        pickerView.dataSource = dataSource
+        pickerView.tag = tag
+        textField.inputView = pickerView
+        textField.text = dataArray[0]
+    }
 }
 
 struct DatosUsuarioModel {
