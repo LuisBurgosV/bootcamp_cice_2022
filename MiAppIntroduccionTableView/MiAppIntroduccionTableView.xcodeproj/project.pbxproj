@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		0BF47148279F237800580116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF47147279F237800580116 /* AppDelegate.swift */; };
-		0BF4714A279F237800580116 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF47149279F237800580116 /* SceneDelegate.swift */; };
-		0BF4714C279F237800580116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4714B279F237800580116 /* ViewController.swift */; };
-		0BF4714F279F237800580116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4714D279F237800580116 /* Main.storyboard */; };
 		0BF47151279F237900580116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF47150279F237900580116 /* Assets.xcassets */; };
 		0BF47154279F237900580116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF47152279F237900580116 /* LaunchScreen.storyboard */; };
+		0BF4715E279F258600580116 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4715D279F258600580116 /* AppCoordinator.swift */; };
+		0BF47163279F29D600580116 /* ListaCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF47161279F29D600580116 /* ListaCochesViewController.swift */; };
+		0BF47164279F29D600580116 /* ListaCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF47162279F29D600580116 /* ListaCochesViewController.xib */; };
+		0BF47166279F2A4200580116 /* ListaCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF47165279F2A4200580116 /* ListaCochesCoordinator.swift */; };
+		0BF4716A279F2DB300580116 /* MesesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF47168279F2DB300580116 /* MesesCell.swift */; };
+		0BF4716B279F2DB300580116 /* MesesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF47169279F2DB300580116 /* MesesCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0BF47144279F237800580116 /* MiAppIntroduccionTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiAppIntroduccionTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF47147279F237800580116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0BF47149279F237800580116 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0BF4714B279F237800580116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0BF4714E279F237800580116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BF47150279F237900580116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BF47153279F237900580116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BF47155279F237900580116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BF4715D279F258600580116 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0BF47161279F29D600580116 /* ListaCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesViewController.swift; sourceTree = "<group>"; };
+		0BF47162279F29D600580116 /* ListaCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaCochesViewController.xib; sourceTree = "<group>"; };
+		0BF47165279F2A4200580116 /* ListaCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesCoordinator.swift; sourceTree = "<group>"; };
+		0BF47168279F2DB300580116 /* MesesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesesCell.swift; sourceTree = "<group>"; };
+		0BF47169279F2DB300580116 /* MesesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MesesCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		0BF47146279F237800580116 /* MiAppIntroduccionTableView */ = {
 			isa = PBXGroup;
 			children = (
-				0BF47147279F237800580116 /* AppDelegate.swift */,
-				0BF47149279F237800580116 /* SceneDelegate.swift */,
-				0BF4714B279F237800580116 /* ViewController.swift */,
-				0BF4714D279F237800580116 /* Main.storyboard */,
+				0BF4715B279F23E000580116 /* Source */,
+				0BF4715C279F256600580116 /* CoreApp */,
 				0BF47150279F237900580116 /* Assets.xcassets */,
 				0BF47152279F237900580116 /* LaunchScreen.storyboard */,
 				0BF47155279F237900580116 /* Info.plist */,
 			);
 			path = MiAppIntroduccionTableView;
+			sourceTree = "<group>";
+		};
+		0BF4715B279F23E000580116 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0BF4715F279F28FE00580116 /* Modules */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0BF4715C279F256600580116 /* CoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				0BF47147279F237800580116 /* AppDelegate.swift */,
+				0BF4715D279F258600580116 /* AppCoordinator.swift */,
+			);
+			path = CoreApp;
+			sourceTree = "<group>";
+		};
+		0BF4715F279F28FE00580116 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0BF47160279F290C00580116 /* ListaCochesView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0BF47160279F290C00580116 /* ListaCochesView */ = {
+			isa = PBXGroup;
+			children = (
+				0BF47167279F2D7700580116 /* Cell */,
+				0BF47161279F29D600580116 /* ListaCochesViewController.swift */,
+				0BF47162279F29D600580116 /* ListaCochesViewController.xib */,
+				0BF47165279F2A4200580116 /* ListaCochesCoordinator.swift */,
+			);
+			path = ListaCochesView;
+			sourceTree = "<group>";
+		};
+		0BF47167279F2D7700580116 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0BF47168279F2DB300580116 /* MesesCell.swift */,
+				0BF47169279F2DB300580116 /* MesesCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BF47154279F237900580116 /* LaunchScreen.storyboard in Resources */,
+				0BF47164279F29D600580116 /* ListaCochesViewController.xib in Resources */,
 				0BF47151279F237900580116 /* Assets.xcassets in Resources */,
-				0BF4714F279F237800580116 /* Main.storyboard in Resources */,
+				0BF4716B279F2DB300580116 /* MesesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +187,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BF4714C279F237800580116 /* ViewController.swift in Sources */,
+				0BF4716A279F2DB300580116 /* MesesCell.swift in Sources */,
+				0BF4715E279F258600580116 /* AppCoordinator.swift in Sources */,
+				0BF47166279F2A4200580116 /* ListaCochesCoordinator.swift in Sources */,
+				0BF47163279F29D600580116 /* ListaCochesViewController.swift in Sources */,
 				0BF47148279F237800580116 /* AppDelegate.swift in Sources */,
-				0BF4714A279F237800580116 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0BF4714D279F237800580116 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0BF4714E279F237800580116 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0BF47152279F237900580116 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
