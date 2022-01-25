@@ -17,6 +17,7 @@ class ListaCochesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = Utils.Constants().tituloListaMeses
         self.configuracionTableView()
         // Do any additional setup after loading the view.
     }
@@ -25,7 +26,7 @@ class ListaCochesViewController: UIViewController {
     private func configuracionTableView() {
         self.miMesesAnioTableView.delegate = self
         self.miMesesAnioTableView.dataSource = self
-        self.miMesesAnioTableView.register(UINib(nibName: "MesesCell", bundle: nil), forCellReuseIdentifier: "MesesCell")
+        self.miMesesAnioTableView.register(UINib(nibName: MesesCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: MesesCell.defaultReuseIdentifier)
     }
 }
 
@@ -39,8 +40,9 @@ extension ListaCochesViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellMeses = self.miMesesAnioTableView.dequeueReusableCell(withIdentifier: "MesesCell", for: indexPath) as! MesesCell
-        cellMeses.miNombreMesLBL.text = self.dataSourceMeses[indexPath.row]
+        let cellMeses = self.miMesesAnioTableView.dequeueReusableCell(withIdentifier: MesesCell.defaultReuseIdentifier, for: indexPath) as! MesesCell
+        //cellMeses.miNombreMesLBL.text = self.dataSourceMeses[indexPath.row]
+        cellMeses.setupCell(model: self.dataSourceMeses[indexPath.row])
         return cellMeses
         
     }

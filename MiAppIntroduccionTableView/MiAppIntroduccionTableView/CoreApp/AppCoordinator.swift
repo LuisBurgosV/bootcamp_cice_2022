@@ -20,7 +20,7 @@ final class AppCoordinator {
 extension AppCoordinator: AppCoordinatorProtocol {
     
     func setPrincipalViewController(window: UIWindow) {
-        self.actualViewController = ListaCochesCoordinator.navigation()
+        self.actualViewController = HomeTabBarCoordinator.tabBarController()
         window.rootViewController = self.actualViewController
         window.makeKeyAndVisible()
     }

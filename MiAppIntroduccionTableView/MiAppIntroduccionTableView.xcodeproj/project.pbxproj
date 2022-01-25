@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BA4401C27A0852D009EAF0F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4401B27A0852D009EAF0F /* Utils.swift */; };
+		0BA4402027A08820009EAF0F /* ListaSuperCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4401E27A08820009EAF0F /* ListaSuperCochesViewController.swift */; };
+		0BA4402127A08820009EAF0F /* ListaSuperCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA4401F27A08820009EAF0F /* ListaSuperCochesViewController.xib */; };
+		0BA4402327A08870009EAF0F /* ListaSuperCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4402227A08870009EAF0F /* ListaSuperCochesCoordinator.swift */; };
+		0BA4402727A08A7A009EAF0F /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4402527A08A7A009EAF0F /* HomeTabBarViewController.swift */; };
+		0BA4402827A08A7A009EAF0F /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA4402627A08A7A009EAF0F /* HomeTabBarViewController.xib */; };
+		0BA4402A27A08A93009EAF0F /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4402927A08A93009EAF0F /* HomeTabBarCoordinator.swift */; };
+		0BA4402D27A0909A009EAF0F /* CochesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4402C27A0909A009EAF0F /* CochesModel.swift */; };
+		0BA4403127A09568009EAF0F /* CochesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4402F27A09568009EAF0F /* CochesCell.swift */; };
+		0BA4403227A09568009EAF0F /* CochesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA4403027A09568009EAF0F /* CochesCell.xib */; };
 		0BF47148279F237800580116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF47147279F237800580116 /* AppDelegate.swift */; };
 		0BF47151279F237900580116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF47150279F237900580116 /* Assets.xcassets */; };
 		0BF47154279F237900580116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF47152279F237900580116 /* LaunchScreen.storyboard */; };
@@ -19,6 +29,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BA4401B27A0852D009EAF0F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0BA4401E27A08820009EAF0F /* ListaSuperCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSuperCochesViewController.swift; sourceTree = "<group>"; };
+		0BA4401F27A08820009EAF0F /* ListaSuperCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaSuperCochesViewController.xib; sourceTree = "<group>"; };
+		0BA4402227A08870009EAF0F /* ListaSuperCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSuperCochesCoordinator.swift; sourceTree = "<group>"; };
+		0BA4402527A08A7A009EAF0F /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		0BA4402627A08A7A009EAF0F /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
+		0BA4402927A08A93009EAF0F /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
+		0BA4402C27A0909A009EAF0F /* CochesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CochesModel.swift; sourceTree = "<group>"; };
+		0BA4402F27A09568009EAF0F /* CochesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CochesCell.swift; sourceTree = "<group>"; };
+		0BA4403027A09568009EAF0F /* CochesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CochesCell.xib; sourceTree = "<group>"; };
 		0BF47144279F237800580116 /* MiAppIntroduccionTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiAppIntroduccionTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF47147279F237800580116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BF47150279F237900580116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +63,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BA4401A27A08514009EAF0F /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0BA4401B27A0852D009EAF0F /* Utils.swift */,
+			);
+			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
+		0BA4401D27A087E1009EAF0F /* ListaSuperCochesView */ = {
+			isa = PBXGroup;
+			children = (
+				0BA4402E27A09539009EAF0F /* Cell */,
+				0BA4401E27A08820009EAF0F /* ListaSuperCochesViewController.swift */,
+				0BA4401F27A08820009EAF0F /* ListaSuperCochesViewController.xib */,
+				0BA4402227A08870009EAF0F /* ListaSuperCochesCoordinator.swift */,
+			);
+			path = ListaSuperCochesView;
+			sourceTree = "<group>";
+		};
+		0BA4402427A08A34009EAF0F /* HomeTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				0BA4402527A08A7A009EAF0F /* HomeTabBarViewController.swift */,
+				0BA4402627A08A7A009EAF0F /* HomeTabBarViewController.xib */,
+				0BA4402927A08A93009EAF0F /* HomeTabBarCoordinator.swift */,
+			);
+			path = HomeTabBarView;
+			sourceTree = "<group>";
+		};
+		0BA4402B27A09087009EAF0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0BA4402C27A0909A009EAF0F /* CochesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0BA4402E27A09539009EAF0F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0BA4402F27A09568009EAF0F /* CochesCell.swift */,
+				0BA4403027A09568009EAF0F /* CochesCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		0BF4713B279F237800580116 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +128,8 @@
 		0BF47146279F237800580116 /* MiAppIntroduccionTableView */ = {
 			isa = PBXGroup;
 			children = (
+				0BA4402B27A09087009EAF0F /* Models */,
+				0BA4401A27A08514009EAF0F /* Utils+Helpers */,
 				0BF4715B279F23E000580116 /* Source */,
 				0BF4715C279F256600580116 /* CoreApp */,
 				0BF47150279F237900580116 /* Assets.xcassets */,
@@ -91,6 +159,8 @@
 		0BF4715F279F28FE00580116 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0BA4402427A08A34009EAF0F /* HomeTabBarView */,
+				0BA4401D27A087E1009EAF0F /* ListaSuperCochesView */,
 				0BF47160279F290C00580116 /* ListaCochesView */,
 			);
 			path = Modules;
@@ -174,7 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BF47154279F237900580116 /* LaunchScreen.storyboard in Resources */,
+				0BA4402827A08A7A009EAF0F /* HomeTabBarViewController.xib in Resources */,
 				0BF47164279F29D600580116 /* ListaCochesViewController.xib in Resources */,
+				0BA4403227A09568009EAF0F /* CochesCell.xib in Resources */,
+				0BA4402127A08820009EAF0F /* ListaSuperCochesViewController.xib in Resources */,
 				0BF47151279F237900580116 /* Assets.xcassets in Resources */,
 				0BF4716B279F2DB300580116 /* MesesCell.xib in Resources */,
 			);
@@ -187,11 +260,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA4403127A09568009EAF0F /* CochesCell.swift in Sources */,
+				0BA4402727A08A7A009EAF0F /* HomeTabBarViewController.swift in Sources */,
 				0BF4716A279F2DB300580116 /* MesesCell.swift in Sources */,
 				0BF4715E279F258600580116 /* AppCoordinator.swift in Sources */,
+				0BA4402D27A0909A009EAF0F /* CochesModel.swift in Sources */,
 				0BF47166279F2A4200580116 /* ListaCochesCoordinator.swift in Sources */,
+				0BA4402327A08870009EAF0F /* ListaSuperCochesCoordinator.swift in Sources */,
 				0BF47163279F29D600580116 /* ListaCochesViewController.swift in Sources */,
 				0BF47148279F237800580116 /* AppDelegate.swift in Sources */,
+				0BA4402027A08820009EAF0F /* ListaSuperCochesViewController.swift in Sources */,
+				0BA4401C27A0852D009EAF0F /* Utils.swift in Sources */,
+				0BA4402A27A08A93009EAF0F /* HomeTabBarCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
