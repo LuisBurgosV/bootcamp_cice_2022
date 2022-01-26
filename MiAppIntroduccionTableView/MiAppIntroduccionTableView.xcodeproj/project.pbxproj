@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B08917627A1D15900B8C316 /* ListaPerfilPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08917427A1D15900B8C316 /* ListaPerfilPostViewController.swift */; };
+		0B08917727A1D15900B8C316 /* ListaPerfilPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B08917527A1D15900B8C316 /* ListaPerfilPostViewController.xib */; };
+		0B08917927A1D3BD00B8C316 /* ListaPerfilPostCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08917827A1D3BD00B8C316 /* ListaPerfilPostCoordinator.swift */; };
+		0B08917D27A1D90200B8C316 /* PerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08917B27A1D90200B8C316 /* PerfilCell.swift */; };
+		0B08917E27A1D90200B8C316 /* PerfilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B08917C27A1D90200B8C316 /* PerfilCell.xib */; };
+		0B08918127A1D91600B8C316 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08917F27A1D91600B8C316 /* PostCell.swift */; };
+		0B08918227A1D91600B8C316 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B08918027A1D91600B8C316 /* PostCell.xib */; };
+		0B08918427A1DB6700B8C316 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08918327A1DB6700B8C316 /* UserDataModel.swift */; };
 		0BA4401C27A0852D009EAF0F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4401B27A0852D009EAF0F /* Utils.swift */; };
 		0BA4402027A08820009EAF0F /* ListaSuperCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4401E27A08820009EAF0F /* ListaSuperCochesViewController.swift */; };
 		0BA4402127A08820009EAF0F /* ListaSuperCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA4401F27A08820009EAF0F /* ListaSuperCochesViewController.xib */; };
@@ -29,6 +37,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B08917427A1D15900B8C316 /* ListaPerfilPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPerfilPostViewController.swift; sourceTree = "<group>"; };
+		0B08917527A1D15900B8C316 /* ListaPerfilPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaPerfilPostViewController.xib; sourceTree = "<group>"; };
+		0B08917827A1D3BD00B8C316 /* ListaPerfilPostCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPerfilPostCoordinator.swift; sourceTree = "<group>"; };
+		0B08917B27A1D90200B8C316 /* PerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCell.swift; sourceTree = "<group>"; };
+		0B08917C27A1D90200B8C316 /* PerfilCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilCell.xib; sourceTree = "<group>"; };
+		0B08917F27A1D91600B8C316 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		0B08918027A1D91600B8C316 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		0B08918327A1DB6700B8C316 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		0BA4401B27A0852D009EAF0F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0BA4401E27A08820009EAF0F /* ListaSuperCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSuperCochesViewController.swift; sourceTree = "<group>"; };
 		0BA4401F27A08820009EAF0F /* ListaSuperCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaSuperCochesViewController.xib; sourceTree = "<group>"; };
@@ -63,6 +79,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B08917327A1D12400B8C316 /* ListaPerfilPostView */ = {
+			isa = PBXGroup;
+			children = (
+				0B08917A27A1D67200B8C316 /* Cell */,
+				0B08917427A1D15900B8C316 /* ListaPerfilPostViewController.swift */,
+				0B08917527A1D15900B8C316 /* ListaPerfilPostViewController.xib */,
+				0B08917827A1D3BD00B8C316 /* ListaPerfilPostCoordinator.swift */,
+			);
+			path = ListaPerfilPostView;
+			sourceTree = "<group>";
+		};
+		0B08917A27A1D67200B8C316 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0B08917B27A1D90200B8C316 /* PerfilCell.swift */,
+				0B08917C27A1D90200B8C316 /* PerfilCell.xib */,
+				0B08917F27A1D91600B8C316 /* PostCell.swift */,
+				0B08918027A1D91600B8C316 /* PostCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		0BA4401A27A08514009EAF0F /* Utils+Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0BA4402C27A0909A009EAF0F /* CochesModel.swift */,
+				0B08918327A1DB6700B8C316 /* UserDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +198,7 @@
 		0BF4715F279F28FE00580116 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0B08917327A1D12400B8C316 /* ListaPerfilPostView */,
 				0BA4402427A08A34009EAF0F /* HomeTabBarView */,
 				0BA4401D27A087E1009EAF0F /* ListaSuperCochesView */,
 				0BF47160279F290C00580116 /* ListaCochesView */,
@@ -245,10 +285,13 @@
 			files = (
 				0BF47154279F237900580116 /* LaunchScreen.storyboard in Resources */,
 				0BA4402827A08A7A009EAF0F /* HomeTabBarViewController.xib in Resources */,
+				0B08917727A1D15900B8C316 /* ListaPerfilPostViewController.xib in Resources */,
 				0BF47164279F29D600580116 /* ListaCochesViewController.xib in Resources */,
 				0BA4403227A09568009EAF0F /* CochesCell.xib in Resources */,
 				0BA4402127A08820009EAF0F /* ListaSuperCochesViewController.xib in Resources */,
 				0BF47151279F237900580116 /* Assets.xcassets in Resources */,
+				0B08918227A1D91600B8C316 /* PostCell.xib in Resources */,
+				0B08917E27A1D90200B8C316 /* PerfilCell.xib in Resources */,
 				0BF4716B279F2DB300580116 /* MesesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,14 +307,19 @@
 				0BA4402727A08A7A009EAF0F /* HomeTabBarViewController.swift in Sources */,
 				0BF4716A279F2DB300580116 /* MesesCell.swift in Sources */,
 				0BF4715E279F258600580116 /* AppCoordinator.swift in Sources */,
+				0B08917927A1D3BD00B8C316 /* ListaPerfilPostCoordinator.swift in Sources */,
 				0BA4402D27A0909A009EAF0F /* CochesModel.swift in Sources */,
+				0B08917627A1D15900B8C316 /* ListaPerfilPostViewController.swift in Sources */,
 				0BF47166279F2A4200580116 /* ListaCochesCoordinator.swift in Sources */,
 				0BA4402327A08870009EAF0F /* ListaSuperCochesCoordinator.swift in Sources */,
 				0BF47163279F29D600580116 /* ListaCochesViewController.swift in Sources */,
 				0BF47148279F237800580116 /* AppDelegate.swift in Sources */,
 				0BA4402027A08820009EAF0F /* ListaSuperCochesViewController.swift in Sources */,
 				0BA4401C27A0852D009EAF0F /* Utils.swift in Sources */,
+				0B08917D27A1D90200B8C316 /* PerfilCell.swift in Sources */,
 				0BA4402A27A08A93009EAF0F /* HomeTabBarCoordinator.swift in Sources */,
+				0B08918127A1D91600B8C316 /* PostCell.swift in Sources */,
+				0B08918427A1DB6700B8C316 /* UserDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
