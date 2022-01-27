@@ -7,11 +7,25 @@
 
 import UIKit
 
-class PostCell: UITableViewCell {
+protocol PostCellProtocol {
+    func setupPostCell(data: UserDataModel?)
+}
 
+class PostCell: UITableViewCell, ReuseIdentifierView {
+
+    //MARK: - IBOutlets
+    
+    @IBOutlet weak var miImagenPerfilPost: UIImageView!
+    
+
+    
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.configuracionUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,4 +34,14 @@ class PostCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    private func configuracionUI() {
+        self.miImagenPerfilPost.layer.cornerRadius = self.miImagenPerfilPost.frame.width / 2
+    }
+    
+}
+
+extension PostCell: PostCellProtocol {
+    func setupPostCell(data: UserDataModel?) {
+        self.miImagenPerfilPost.image = UIImage(named: data?.imagePerfil ?? "thor")
+    }
 }

@@ -22,6 +22,7 @@ class ListaPerfilPostViewController: UIViewController {
         self.miPerfilPostTableView.delegate = self
         self.miPerfilPostTableView.dataSource = self
         self.miPerfilPostTableView.register(UINib(nibName: PerfilCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: PerfilCell.defaultReuseIdentifier)
+        self.miPerfilPostTableView.register(UINib(nibName: PostCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: PostCell.defaultReuseIdentifier)
     }
 }
 
@@ -50,7 +51,13 @@ extension ListaPerfilPostViewController: UITableViewDataSource {
                                                            imagePerfil: "thor"))
             return cellPerfil
         default:
-            return UITableViewCell()
+            let cellPost = self.miPerfilPostTableView.dequeueReusableCell(withIdentifier: PostCell.defaultReuseIdentifier, for: indexPath) as! PostCell
+            cellPost.setupPostCell(data: UserDataModel(nombrePerfil: nil,
+                                                       descripcionPerfil: nil,
+                                                       puestoActualPerfil: nil,
+                                                       usuarioLinkedinPerfil: nil,
+                                                       imagePerfil: "miranda"))
+            return cellPost
         }
     }
 }
@@ -65,7 +72,7 @@ extension ListaPerfilPostViewController: UITableViewDelegate {
         case 0:
             return 200
         default:
-            return 44
+            return UITableView.automaticDimension
         }
     }
 }
