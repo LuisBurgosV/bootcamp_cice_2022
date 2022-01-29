@@ -44,6 +44,7 @@ extension ListaPerfilPostViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cellPerfil = self.miPerfilPostTableView.dequeueReusableCell(withIdentifier: PerfilCell.defaultReuseIdentifier, for: indexPath) as! PerfilCell
+            cellPerfil.delegate = self
             cellPerfil.setupCellPerfil(data: UserDataModel(nombrePerfil: "Luis Burgos Vidales",
                                                            descripcionPerfil: "Junior .NET Developer - Engineer on VerraMobility - Lorem Ipsum - Lorem Ipsum - Lorem Ipsum - Lorem Ipsum - Lorem Ipsum - Lorem Ipsum",
                                                            puestoActualPerfil: "Engineer on VerraMobility",
@@ -52,10 +53,10 @@ extension ListaPerfilPostViewController: UITableViewDataSource {
             return cellPerfil
         default:
             let cellPost = self.miPerfilPostTableView.dequeueReusableCell(withIdentifier: PostCell.defaultReuseIdentifier, for: indexPath) as! PostCell
-            cellPost.setupPostCell(data: UserDataModel(nombrePerfil: nil,
-                                                       descripcionPerfil: nil,
-                                                       puestoActualPerfil: nil,
-                                                       usuarioLinkedinPerfil: nil,
+            cellPost.setupPostCell(data: UserDataModel(nombrePerfil: "Miranda",
+                                                       descripcionPerfil: "Señorita muy elegante rubia",
+                                                       puestoActualPerfil: "Ingeniera",
+                                                       usuarioLinkedinPerfil: "@mirandalarubia",
                                                        imagePerfil: "miranda"))
             return cellPost
         }
@@ -74,5 +75,25 @@ extension ListaPerfilPostViewController: UITableViewDelegate {
         default:
             return UITableView.automaticDimension
         }
+    }
+}
+
+extension ListaPerfilPostViewController: PerfilCellOutputDelegate {
+    func showAlertB1() {
+        let alertVC = UIAlertController(title: "Explota la cabeza", message: "\(#function)", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    func showAlertB2() {
+        let alertVC = UIAlertController(title: "Explota la cabeza", message: "\(#function)", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    func navigationToDetailView(withData: UserDataModel?) {
+        let alertVC = UIAlertController(title: "Explota la cabeza", message: withData?.nombrePerfil, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
     }
 }

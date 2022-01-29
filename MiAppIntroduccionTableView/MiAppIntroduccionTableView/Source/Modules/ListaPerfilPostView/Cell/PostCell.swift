@@ -12,15 +12,16 @@ protocol PostCellProtocol {
 }
 
 class PostCell: UITableViewCell, ReuseIdentifierView {
-
+    
     //MARK: - IBOutlets
-    
     @IBOutlet weak var miImagenPerfilPost: UIImageView!
-    
-
-    
-    
-    
+    @IBOutlet weak var miNombrePerfilPost: UILabel!
+    @IBOutlet weak var miPuestoTrabajoPost: UILabel!
+    @IBOutlet weak var miFechaActualPost: UILabel!
+    @IBOutlet weak var miDescripcionPost: UILabel!
+    @IBOutlet weak var miTituoPostLBL: UILabel!
+    @IBOutlet weak var miNumeroLikesLBL: UILabel!
+    @IBOutlet weak var miNumeroComentariosLBL: UILabel!
     
     
     override func awakeFromNib() {
@@ -43,5 +44,12 @@ class PostCell: UITableViewCell, ReuseIdentifierView {
 extension PostCell: PostCellProtocol {
     func setupPostCell(data: UserDataModel?) {
         self.miImagenPerfilPost.image = UIImage(named: data?.imagePerfil ?? "thor")
+        self.miNombrePerfilPost.text = data?.nombrePerfil
+        self.miPuestoTrabajoPost.text = data?.puestoActualPerfil
+        self.miFechaActualPost.text = "\(Date())"
+        self.miDescripcionPost.text = data?.descripcionPerfil
+        self.miTituoPostLBL.text = "Estamos lanzando la App"
+        self.miNumeroLikesLBL.text = "Likes: 1K"
+        self.miNumeroComentariosLBL.text = "Comentarios: 2K"
     }
 }
