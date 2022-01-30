@@ -33,6 +33,7 @@
 		0B17006227A6C15A00107D72 /* CategoriaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17006127A6C15A00107D72 /* CategoriaCoordinator.swift */; };
 		0B17006427A6C18E00107D72 /* ListaTareasCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17006327A6C18E00107D72 /* ListaTareasCoordinator.swift */; };
 		0B17006627A6C1A700107D72 /* DetalleTareaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17006527A6C1A700107D72 /* DetalleTareaCoordinator.swift */; };
+		0B17006827A6C25F00107D72 /* HomeTabBarViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17006727A6C25F00107D72 /* HomeTabBarViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		0B17006127A6C15A00107D72 /* CategoriaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaCoordinator.swift; sourceTree = "<group>"; };
 		0B17006327A6C18E00107D72 /* ListaTareasCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTareasCoordinator.swift; sourceTree = "<group>"; };
 		0B17006527A6C1A700107D72 /* DetalleTareaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTareaCoordinator.swift; sourceTree = "<group>"; };
+		0B17006727A6C25F00107D72 /* HomeTabBarViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				0B17004327A6BEDA00107D72 /* HomeTabBarViewController.swift */,
 				0B17004427A6BEDA00107D72 /* HomeTabBarViewController.xib */,
+				0B17006727A6C25F00107D72 /* HomeTabBarViewCoordinator.swift */,
 			);
 			path = HomeTabBarView;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B17006827A6C25F00107D72 /* HomeTabBarViewCoordinator.swift in Sources */,
 				0B17004127A6BEBB00107D72 /* LoginViewController.swift in Sources */,
 				0B17004927A6BF0800107D72 /* ContactosViewController.swift in Sources */,
 				0B17003627A6B68300107D72 /* TaskModel.swift in Sources */,
