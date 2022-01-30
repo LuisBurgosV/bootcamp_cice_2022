@@ -12,15 +12,25 @@ protocol AppCoreCoordinatorProtocol {
 }
 
 final class AppCoreCoordinator {
-    var actualVC = UIViewController()
+    var actualVC: UIViewController?
 }
-
-
 
 extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
     func initialViewController(window: UIWindow) {
-        self.actualVC = UIViewController()
+        
+        self.muestraRutaUserDefault()
+        
+        if Utils.Constants().kPrefs.bool(forKey: Utils.Constants().kUserLogado) {
+            self.actualVC = HomeViewCoordinator.homeView()
+        }else{
+            self.actualVC = RegistroCoordinator.view()
+        }
+        
         window.rootViewController = self.actualVC
         window.makeKeyAndVisible()
+    }
+    
+    private func muestraRutaUserDefault() {
+        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
     }
 }
