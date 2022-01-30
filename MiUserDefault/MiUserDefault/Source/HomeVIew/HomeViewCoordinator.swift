@@ -23,11 +23,9 @@ final class HomeViewCoordinator {
         
         homeVC.viewControllers = [listaCochesVC, listaPostVC]
         
+        var vc = RegistroCoordinator.view()
+        vc = nil
+
         return homeVC
-    }
-    
-    static func view() -> UIViewController {
-        let vc = HomeViewController()
-        return vc
     }
 }

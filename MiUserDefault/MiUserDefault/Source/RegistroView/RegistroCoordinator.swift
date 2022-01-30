@@ -10,11 +10,11 @@ import UIKit
 final class RegistroCoordinator {
     
     static func navigation() -> UINavigationController {
-        let navVC = UINavigationController (rootViewController: view())
+        let navVC = UINavigationController (rootViewController: view() ?? UIViewController())
         return navVC
     }
     
-    static func view() -> UIViewController {
+    static func view() -> UIViewController? {
         let vc = RegistroViewController()
         return vc
     }
