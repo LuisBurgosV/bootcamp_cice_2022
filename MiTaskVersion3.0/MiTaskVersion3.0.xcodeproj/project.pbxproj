@@ -35,6 +35,9 @@
 		0B17006627A6C1A700107D72 /* DetalleTareaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17006527A6C1A700107D72 /* DetalleTareaCoordinator.swift */; };
 		0B17006827A6C25F00107D72 /* HomeTabBarViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17006727A6C25F00107D72 /* HomeTabBarViewCoordinator.swift */; };
 		0B17006B27A6FDDE00107D72 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17006A27A6FDDE00107D72 /* Utils.swift */; };
+		0BFAD6FE27A85E62007EAE92 /* ContactosServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAD6FD27A85E62007EAE92 /* ContactosServerModel.swift */; };
+		0BFAD70227A86672007EAE92 /* ContactosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAD70027A86672007EAE92 /* ContactosCell.swift */; };
+		0BFAD70327A86672007EAE92 /* ContactosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFAD70127A86672007EAE92 /* ContactosCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		0B17006527A6C1A700107D72 /* DetalleTareaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTareaCoordinator.swift; sourceTree = "<group>"; };
 		0B17006727A6C25F00107D72 /* HomeTabBarViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewCoordinator.swift; sourceTree = "<group>"; };
 		0B17006A27A6FDDE00107D72 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0BFAD6FD27A85E62007EAE92 /* ContactosServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosServerModel.swift; sourceTree = "<group>"; };
+		0BFAD70027A86672007EAE92 /* ContactosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosCell.swift; sourceTree = "<group>"; };
+		0BFAD70127A86672007EAE92 /* ContactosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactosCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				0B17003527A6B68300107D72 /* TaskModel.swift */,
+				0BFAD6FD27A85E62007EAE92 /* ContactosServerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +179,7 @@
 		0B17003A27A6BE4400107D72 /* ContactosView */ = {
 			isa = PBXGroup;
 			children = (
+				0BFAD6FF27A86654007EAE92 /* Cell */,
 				0B17004727A6BF0800107D72 /* ContactosViewController.swift */,
 				0B17004827A6BF0800107D72 /* ContactosViewController.xib */,
 				0B17005D27A6C0F500107D72 /* ContactosViewCoordinator.swift */,
@@ -227,6 +235,15 @@
 				0B17006A27A6FDDE00107D72 /* Utils.swift */,
 			);
 			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
+		0BFAD6FF27A86654007EAE92 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0BFAD70027A86672007EAE92 /* ContactosCell.swift */,
+				0BFAD70127A86672007EAE92 /* ContactosCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +307,7 @@
 				0B17004E27A6BF1900107D72 /* NuevaTareaViewController.xib in Resources */,
 				0B17005A27A6BF5300107D72 /* DetalleTareaViewController.xib in Resources */,
 				0B17005227A6BF2B00107D72 /* CategoriaViewController.xib in Resources */,
+				0BFAD70327A86672007EAE92 /* ContactosCell.xib in Resources */,
 				0B17004A27A6BF0800107D72 /* ContactosViewController.xib in Resources */,
 				0B17005627A6BF3B00107D72 /* ListaTareasViewController.xib in Resources */,
 				0B17002727A6AF7E00107D72 /* LaunchScreen.storyboard in Resources */,
@@ -309,6 +327,8 @@
 				0B17006827A6C25F00107D72 /* HomeTabBarViewCoordinator.swift in Sources */,
 				0B17004127A6BEBB00107D72 /* LoginViewController.swift in Sources */,
 				0B17004927A6BF0800107D72 /* ContactosViewController.swift in Sources */,
+				0BFAD6FE27A85E62007EAE92 /* ContactosServerModel.swift in Sources */,
+				0BFAD70227A86672007EAE92 /* ContactosCell.swift in Sources */,
 				0B17003627A6B68300107D72 /* TaskModel.swift in Sources */,
 				0B17005C27A6C02700107D72 /* LoginViewCoordinator.swift in Sources */,
 				0B17006627A6C1A700107D72 /* DetalleTareaCoordinator.swift in Sources */,
