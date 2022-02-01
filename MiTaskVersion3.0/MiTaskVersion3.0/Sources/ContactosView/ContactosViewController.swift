@@ -38,7 +38,8 @@ class ContactosViewController: UIViewController {
 extension ContactosViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = self.dataSourceContactos[indexPath.row]
-        debugPrint(model.abstractoVC ?? "pruebas")
+        let vc = DetalleContactoCoordinator.view(dto: DetalleContactoCoordinatorDTO(model: model))
+        self.show(vc, sender: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

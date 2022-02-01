@@ -20,20 +20,20 @@
                         <rect key="frame" x="4" y="4" width="312" height="62"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="75K-DB-rfL">
-                                <rect key="frame" x="20" y="2" width="58" height="58"/>
+                                <rect key="frame" x="5" y="2" width="58" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="58" id="62z-tw-FTN"/>
                                     <constraint firstAttribute="height" constant="58" id="MOu-X8-yTw"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iD0-9a-a1F">
-                                <rect key="frame" x="86" y="2" width="206" height="21"/>
+                                <rect key="frame" x="71" y="2" width="221" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_apellidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsR-Wz-XD5">
-                                <rect key="frame" x="86" y="31" width="206" height="21"/>
+                                <rect key="frame" x="71" y="31" width="221" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                             <constraint firstItem="BsR-Wz-XD5" firstAttribute="trailing" secondItem="iD0-9a-a1F" secondAttribute="trailing" id="UCb-y8-Vfh"/>
                             <constraint firstItem="iD0-9a-a1F" firstAttribute="top" secondItem="75K-DB-rfL" secondAttribute="top" id="ctu-2q-No7"/>
                             <constraint firstAttribute="trailing" secondItem="iD0-9a-a1F" secondAttribute="trailing" constant="20" id="kMl-tN-pME"/>
-                            <constraint firstItem="75K-DB-rfL" firstAttribute="leading" secondItem="7UO-mT-ABd" secondAttribute="leading" constant="20" id="mhD-Xq-aQu"/>
+                            <constraint firstItem="75K-DB-rfL" firstAttribute="leading" secondItem="7UO-mT-ABd" secondAttribute="leading" constant="5" id="mhD-Xq-aQu"/>
                             <constraint firstItem="BsR-Wz-XD5" firstAttribute="leading" secondItem="iD0-9a-a1F" secondAttribute="leading" id="nnY-hz-uwe"/>
                             <constraint firstItem="iD0-9a-a1F" firstAttribute="leading" secondItem="75K-DB-rfL" secondAttribute="trailing" constant="8" id="rN8-sL-VWz"/>
                         </constraints>
@@ -60,7 +60,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="customContentView" destination="7UO-mT-ABd" id="0Qm-AR-nIx"/>
                 <outlet property="imagePerfil" destination="75K-DB-rfL" id="H2p-JQ-FvC"/>
                 <outlet property="lastnamePerfil" destination="BsR-Wz-XD5" id="Gpe-bi-tNV"/>
                 <outlet property="namePerfil" destination="iD0-9a-a1F" id="PiD-nD-5SN"/>
