@@ -63,15 +63,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAp-W4-xdY">
+                        <rect key="frame" x="268" y="110" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="pPW-dC-bSh"/>
+                            <constraint firstAttribute="height" constant="44" id="qNN-MV-9Ks"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="showCameraPhotos:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7Ic-Zg-woO"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="meg-R2-DoF" firstAttribute="top" secondItem="rga-8F-Vq8" secondAttribute="bottom" constant="12" id="1Gs-xL-xxS"/>
                     <constraint firstItem="6jZ-Ud-MlP" firstAttribute="trailing" secondItem="KZ9-zw-CHz" secondAttribute="trailing" id="3KM-VN-i9d"/>
                     <constraint firstAttribute="bottom" secondItem="0YY-jF-GQS" secondAttribute="bottom" constant="8" id="5hG-zg-nHH"/>
                     <constraint firstItem="0YY-jF-GQS" firstAttribute="leading" secondItem="meg-R2-DoF" secondAttribute="leading" id="8x1-wk-9Kn"/>
+                    <constraint firstAttribute="trailing" secondItem="AAp-W4-xdY" secondAttribute="trailing" constant="8" id="ED3-pN-0Rp"/>
                     <constraint firstItem="16c-RP-5XI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="EX7-BE-CHr"/>
                     <constraint firstItem="6jZ-Ud-MlP" firstAttribute="leading" secondItem="KZ9-zw-CHz" secondAttribute="leading" id="Ji6-AI-8g0"/>
                     <constraint firstItem="EEs-Pj-g6Q" firstAttribute="leading" secondItem="16c-RP-5XI" secondAttribute="leading" id="KDQ-ug-RJn"/>
+                    <constraint firstItem="AAp-W4-xdY" firstAttribute="top" secondItem="6jZ-Ud-MlP" secondAttribute="top" id="OWU-fJ-z4Z"/>
                     <constraint firstItem="9Xs-eQ-gwh" firstAttribute="top" secondItem="KZ9-zw-CHz" secondAttribute="bottom" constant="8" id="bsu-eJ-UTd"/>
                     <constraint firstItem="0YY-jF-GQS" firstAttribute="top" secondItem="meg-R2-DoF" secondAttribute="bottom" constant="8" id="gFP-wf-ELt"/>
                     <constraint firstItem="meg-R2-DoF" firstAttribute="trailing" secondItem="rga-8F-Vq8" secondAttribute="trailing" id="gLv-4g-Ugh"/>

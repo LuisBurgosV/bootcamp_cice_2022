@@ -7,18 +7,31 @@
 
 import UIKit
 
+protocol PerfilCellDelegate: AnyObject {
+    func showCameraPhoto()
+}
+
 protocol PerfilCellProtocol {
-    func configuracionCell(data: ArrayContact)
+    func configuracionCell(data: Contact)
 }
 
 class PerfilCell: UITableViewCell, ReuseIdentifierProtocol {
 
+    //MARK: - Variables Globales
+    weak var delegate: PerfilCellDelegate?
+    
     //MARK: - IBOutlets
     @IBOutlet weak var photoProfile: UIImageView!
     @IBOutlet weak var usuarioTwitter: UILabel!
     @IBOutlet weak var nombrePerfil: UILabel!
     @IBOutlet weak var apellidoPerfil: UILabel!
     @IBOutlet weak var CvPerfil: UILabel!
+    
+    //MARK: - IBActions
+    
+    @IBAction func showCameraPhotos(_ sender: Any) {
+        self.delegate?.showCameraPhoto()
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,12 +43,16 @@ class PerfilCell: UITableViewCell, ReuseIdentifierProtocol {
 
         // Configure the view for the selected state
     }
-    
 }
 
 extension PerfilCell: PerfilCellProtocol {
-    func configuracionCell(data: ArrayContact) {
-        self.photoProfile.image = UIImage(named: data.imageProfile ?? "placeholder")
+    func configuracionCell(data: Contact) {
+        if let imageData = Utils.Constantes().kPrefs.object(forKey: Utils.Constantes().kImageProfile) as? Data{
+            self.photoProfile.image = UIImage(data: imageData)
+        }else{
+            self.photoProfile.image = UIImage(named: data.imageProfile ?? "placeholder")
+        }
+        
         self.usuarioTwitter.text = data.usernameTwitter
         self.nombrePerfil.text = data.firstName
         self.apellidoPerfil.text = data.lastName

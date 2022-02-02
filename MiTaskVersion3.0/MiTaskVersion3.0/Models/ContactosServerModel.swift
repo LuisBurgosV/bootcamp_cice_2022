@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - ContactosServerModel
 struct ContactosServerModel: Codable {
-    let arrayContacts: [ArrayContact]?
+    let arrayContacts: [Contact]?
 
     enum CodingKeys: String, CodingKey {
         case arrayContacts = "arrayContacts"
@@ -15,7 +15,7 @@ struct ContactosServerModel: Codable {
 }
 
 // MARK: - ArrayContact
-struct ArrayContact: Codable {
+struct Contact: Codable {
     let firstName: String?
     let lastName: String?
     let usernameTwitter: String?
@@ -51,8 +51,8 @@ struct ArrayContact: Codable {
 
 //MARK: - HUB
 extension ContactosServerModel {
-    static var stubbedContactos: [ArrayContact]? {
-        var arrayContactos: [ArrayContact] = []
+    static var stubbedContactos: [Contact]? {
+        var arrayContactos: [Contact] = []
         do {
             let response: ContactosServerModel? = try Bundle.main.loadAndDecodeJSON(filename: "contacts")
             arrayContactos = response?.arrayContacts ?? []

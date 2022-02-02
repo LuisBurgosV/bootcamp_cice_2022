@@ -21,7 +21,7 @@ final class HomeTabBarViewCoordinator {
         let iconContacto = UITabBarItem(title: "Mis Contactos", image: UIImage(systemName: "person.crop.circle"), selectedImage: UIImage(systemName: "person.crop.circle.fill"))
         
         let iconNuevaTarea = UITabBarItem(title: "Nueva Tarea", image: UIImage(systemName: "pencil.and.outline"), selectedImage: UIImage(systemName: "pencil.and.outline"))
-        let iconListaTarea = UITabBarItem(title: "Lista de Tareas", image: UIImage(systemName: "text.redaction"), selectedImage: UIImage(systemName: "text.redaction"))
+        let iconListaTarea = UITabBarItem(title: "Mis Tareas", image: UIImage(systemName: "text.redaction"), selectedImage: UIImage(systemName: "text.redaction"))
         
         //asignamos icono a controladores
         contactosVC.tabBarItem = iconContacto
