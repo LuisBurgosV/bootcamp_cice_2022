@@ -32,6 +32,30 @@ class Utils {
         mailCompo.setMessageBody(emailBody, isHTML: false)
         return mailCompo
     }
+    
+    static func muestraPhotoMenu(completionFoto: ((UIAlertAction) -> Void)?, completionLibrary: ((UIAlertAction) -> Void)?) -> UIAlertController{
+        let actionSheetVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheetVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        actionSheetVC.addAction(UIAlertAction(title: "Tomar Foto", style: .default, handler: completionFoto))
+        actionSheetVC.addAction(UIAlertAction(title: "Escoge de la libreria", style: .default, handler: completionLibrary))
+        return actionSheetVC
+    }
+    
+    static func muestraPhotoLibrary(delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> UIImagePickerController{
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = delegate
+        imagePicker.allowsEditing = true
+        return imagePicker
+    }
+    
+    static func tomarFoto(delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> UIImagePickerController{
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.delegate = delegate
+        imagePicker.allowsEditing = true
+        return imagePicker
+    }
 }
 
 protocol ReuseIdentifierProtocol: AnyObject {
