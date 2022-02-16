@@ -32,6 +32,7 @@ class NuevaTareaViewController: UIViewController {
 
     @IBAction func guardarTareaUACTION(_ sender: Any) {
         if validacionDatos() {
+            
             if let imageData = self.imagenTareaIV.image?.jpegData(compressionQuality: 0.3) {
                 
                 SaveFavoritesPresenter.shared.addLocal(favorite: DownloadNewModel(pId: Int.random(in: 0..<999), pNewTask: self.nuevaTareaTF.text ?? "", pPriority: self.prioridadTF.text ?? "", pTaskDate: self.fechaTF.text ?? "", pTaskDescription: self.descripcionTF.text ?? "", pTaskCategory: self.categoriaLBL.text ?? "", pTaskImage: imageData)) { result in
@@ -45,7 +46,7 @@ class NuevaTareaViewController: UIViewController {
                             notification.applicationIconBadgeNumber = UIApplication.shared.applicationIconBadgeNumber + 1
                             UIApplication.shared.scheduleLocalNotification(notification)
                             
-                            //self.limpiarDatosTarea()
+                            self.limpiarDatos()
                             
                         }), animated: true, completion: nil)
                     }
@@ -56,6 +57,15 @@ class NuevaTareaViewController: UIViewController {
         }else{
             self.present(Utils.muestraAlerta(titulo: "Hey!!", mensaje: "Por favor llena todos los campos y ten en cuenta seleccionar una fotografia de la tarea", completionHandler: nil), animated: true, completion: nil)
         }
+    }
+    
+    private func limpiarDatos() {
+        self.nuevaTareaTF.text = ""
+        self.prioridadTF.text = ""
+        self.fechaTF.text = ""
+        self.descripcionTF.text = "Coloca una breve descripcion de la tarea"
+        self.imagenTareaIV.image = UIImage(named: "placeholder")
+        self.categoriaLBL.text = self.nombreCategoria
     }
     
     @IBAction func muestraCamaraACTION(_ sender: Any) {
