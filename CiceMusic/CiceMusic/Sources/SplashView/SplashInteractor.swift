@@ -14,12 +14,12 @@ protocol SplashInteractorInputProtocol {
 
 
 final class SplashInteractor: BaseInteractor<SplashInteractorOutputProtocol> {
-    
+    let splashProvider: SplashProviderInputProtocol = SplashProvider()
 }
 
 //Input del interactor
 extension SplashInteractor: SplashInteractorInputProtocol {
     func fettchDataFromWebServiceInteractor() {
-        print("AQUI LUIS")
+        self.splashProvider.fetchData()
     }
 }

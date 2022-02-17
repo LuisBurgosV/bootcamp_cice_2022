@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let windowUnw = self.window {
             self.appCore.initialViewController(window: windowUnw)
         }
-        
         return true
     }
 
