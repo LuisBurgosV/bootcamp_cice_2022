@@ -26,25 +26,36 @@ import Foundation
 
 //Input del presenter
 protocol PodcastPresenterInputProtocol {
-    
+    func fetchPodcastFromWebService()
 }
 
 //Output del Interactor
 protocol PodcastInteractorOutputProtocol {
-    
+    func setDataFromWebInteractor(data: [GenericResult]?)
 }
 
 final class PodcastPresenter: BasePresenter<PodcastPresenterOutputProtocol, PodcastInteractorInputProtocol, PodcastRouterInputProtocol> {
+    
+    var dataSourceViewModel: [GenericResult] = []
     
 }
 
 //Input del presenter
 extension PodcastPresenter: PodcastPresenterInputProtocol {
+    func fetchPodcastFromWebService() {
+        self.interactor?.fetchPodcastFromWebServiceInteractor()
+    }
     
 }
 
 //Output del presenter
 extension PodcastPresenter: PodcastInteractorOutputProtocol {
-    
+    func setDataFromWebInteractor(data: [GenericResult]?) {
+        guard let dataUnw = data else { return }
+        
+        self.dataSourceViewModel.removeAll()
+        self.dataSourceViewModel = dataUnw
+        self.viewController?.reloadInformationInView()
+    }
 }
 

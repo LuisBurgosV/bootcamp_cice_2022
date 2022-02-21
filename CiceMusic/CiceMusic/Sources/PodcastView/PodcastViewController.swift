@@ -33,7 +33,7 @@ class PodcastViewController: BaseView<PodcastPresenterInputProtocol> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        self.presenter?.fetchPodcastFromWebService()
     }
 
 }

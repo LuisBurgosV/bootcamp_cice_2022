@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,11 @@
 		0B6986FD27BD7DE5009D24F8 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6986FC27BD7DE5009D24F8 /* SplashInteractor.swift */; };
 		0B6986FF27BD7DF0009D24F8 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6986FE27BD7DF0009D24F8 /* SplashRouter.swift */; };
 		0B69870127BD82AC009D24F8 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69870027BD82AC009D24F8 /* SplashCoordinator.swift */; };
+		0BCF370B27C2513000F24964 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF370927C2513000F24964 /* MusicCell.swift */; };
+		0BCF370C27C2513000F24964 /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF370A27C2513000F24964 /* MusicCell.xib */; };
+		0BCF370F27C256BD00F24964 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0BCF370E27C256BD00F24964 /* Kingfisher */; };
+		0BD9353527C40A9C0096D9DF /* PodcastServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD9353427C40A9C0096D9DF /* PodcastServerModel.swift */; };
+		0BD9353827C40EE50096D9DF /* AppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD9353727C40EE50096D9DF /* AppleViewModel.swift */; };
 		0BDA6C0627C10406000E45ED /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BDA6BFF27C10406000E45ED /* MusicViewController.xib */; };
 		0BDA6C0727C10406000E45ED /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6C0027C10406000E45ED /* MusicViewController.swift */; };
 		0BDA6C0827C10406000E45ED /* MusicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6C0127C10406000E45ED /* MusicRouter.swift */; };
@@ -63,6 +68,10 @@
 		0B6986FC27BD7DE5009D24F8 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		0B6986FE27BD7DF0009D24F8 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		0B69870027BD82AC009D24F8 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		0BCF370927C2513000F24964 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
+		0BCF370A27C2513000F24964 /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
+		0BD9353427C40A9C0096D9DF /* PodcastServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastServerModel.swift; sourceTree = "<group>"; };
+		0BD9353727C40EE50096D9DF /* AppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleViewModel.swift; sourceTree = "<group>"; };
 		0BDA6BFF27C10406000E45ED /* MusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
 		0BDA6C0027C10406000E45ED /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		0BDA6C0127C10406000E45ED /* MusicRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRouter.swift; sourceTree = "<group>"; };
@@ -99,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCF370F27C256BD00F24964 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +134,7 @@
 		0B6986D927BD74D7009D24F8 /* CiceMusic */ = {
 			isa = PBXGroup;
 			children = (
+				0BD9353627C40ECD0096D9DF /* ViewModels */,
 				0BE4F8FC27BEE384008017AB /* Models */,
 				0BE4F8F727BED034008017AB /* Utils+Helpers */,
 				0BE4F8F227BECE23008017AB /* NetworkService */,
@@ -180,6 +191,23 @@
 			path = SplashView;
 			sourceTree = "<group>";
 		};
+		0BCF370827C2500600F24964 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0BCF370927C2513000F24964 /* MusicCell.swift */,
+				0BCF370A27C2513000F24964 /* MusicCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0BD9353627C40ECD0096D9DF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0BD9353727C40EE50096D9DF /* AppleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		0BDA6BFB27C103A9000E45ED /* HomeTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +221,7 @@
 		0BDA6BFC27C103BA000E45ED /* MusicView */ = {
 			isa = PBXGroup;
 			children = (
+				0BCF370827C2500600F24964 /* Cell */,
 				0BDA6BFF27C10406000E45ED /* MusicViewController.xib */,
 				0BDA6C0027C10406000E45ED /* MusicViewController.swift */,
 				0BDA6C0127C10406000E45ED /* MusicRouter.swift */,
@@ -253,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				0BE4F8FD27BEE390008017AB /* MusicServerModel.swift */,
+				0BD9353427C40A9C0096D9DF /* PodcastServerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,6 +303,9 @@
 			dependencies = (
 			);
 			name = CiceMusic;
+			packageProductDependencies = (
+				0BCF370E27C256BD00F24964 /* Kingfisher */,
+			);
 			productName = CiceMusic;
 			productReference = 0B6986D727BD74D7009D24F8 /* CiceMusic.app */;
 			productType = "com.apple.product-type.application";
@@ -300,6 +333,9 @@
 				Base,
 			);
 			mainGroup = 0B6986CE27BD74D7009D24F8;
+			packageReferences = (
+				0BCF370D27C256BD00F24964 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 0B6986D827BD74D7009D24F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -321,6 +357,7 @@
 				0B6986E427BD74D8009D24F8 /* Assets.xcassets in Resources */,
 				0BDA6C2227C10446000E45ED /* BookViewController.xib in Resources */,
 				0BDA6C2C27C106E8000E45ED /* HomeTabBarViewController.xib in Resources */,
+				0BCF370C27C2513000F24964 /* MusicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,8 +395,11 @@
 				0B6986F327BD7969009D24F8 /* BaseVIPER.swift in Sources */,
 				0BE4F8F927BED043008017AB /* Utils.swift in Sources */,
 				0BDA6C0B27C10406000E45ED /* MusicPresenter.swift in Sources */,
+				0BCF370B27C2513000F24964 /* MusicCell.swift in Sources */,
 				0BDA6C2727C10446000E45ED /* BookPresenter.swift in Sources */,
+				0BD9353827C40EE50096D9DF /* AppleViewModel.swift in Sources */,
 				0BDA6C2827C10446000E45ED /* BookInteractor.swift in Sources */,
+				0BD9353527C40A9C0096D9DF /* PodcastServerModel.swift in Sources */,
 				0B6986F027BD7663009D24F8 /* AppCoreCoordinator.swift in Sources */,
 				0B6986F827BD7C22009D24F8 /* SplashViewController.swift in Sources */,
 				0BE4F8F627BECF9D008017AB /* NetworkError.swift in Sources */,
@@ -557,6 +597,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0BCF370D27C256BD00F24964 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0BCF370E27C256BD00F24964 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BCF370D27C256BD00F24964 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0B6986CF27BD74D7009D24F8 /* Project object */;
 }
