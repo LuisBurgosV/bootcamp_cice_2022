@@ -51,7 +51,7 @@
 		0BE4F8F627BECF9D008017AB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4F8F527BECF9D008017AB /* NetworkError.swift */; };
 		0BE4F8F927BED043008017AB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4F8F827BED043008017AB /* Utils.swift */; };
 		0BE4F8FB27BED9A1008017AB /* SplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4F8FA27BED9A1008017AB /* SplashProvider.swift */; };
-		0BE4F8FE27BEE390008017AB /* MusicServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4F8FD27BEE390008017AB /* MusicServerModel.swift */; };
+		0BE4F8FE27BEE390008017AB /* AppleServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4F8FD27BEE390008017AB /* AppleServerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,7 +100,7 @@
 		0BE4F8F527BECF9D008017AB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0BE4F8F827BED043008017AB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0BE4F8FA27BED9A1008017AB /* SplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProvider.swift; sourceTree = "<group>"; };
-		0BE4F8FD27BEE390008017AB /* MusicServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicServerModel.swift; sourceTree = "<group>"; };
+		0BE4F8FD27BEE390008017AB /* AppleServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleServerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,7 +281,7 @@
 		0BE4F8FC27BEE384008017AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0BE4F8FD27BEE390008017AB /* MusicServerModel.swift */,
+				0BE4F8FD27BEE390008017AB /* AppleServerModel.swift */,
 				0BD9353427C40A9C0096D9DF /* PodcastServerModel.swift */,
 			);
 			path = Models;
@@ -368,7 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BE4F8FE27BEE390008017AB /* MusicServerModel.swift in Sources */,
+				0BE4F8FE27BEE390008017AB /* AppleServerModel.swift in Sources */,
 				0B6986DB27BD74D7009D24F8 /* AppDelegate.swift in Sources */,
 				0BE4F8FB27BED9A1008017AB /* SplashProvider.swift in Sources */,
 				0BDA6C1827C10416000E45ED /* PodcastCoordinator.swift in Sources */,

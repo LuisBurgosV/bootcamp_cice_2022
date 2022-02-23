@@ -8,16 +8,16 @@
 import Foundation
 
 protocol SplashProviderInputProtocol {
-    func fetchData(completionHandler: @escaping (Result<MusicServerModel, NetworkError>) -> Void)
+    func fetchData(completionHandler: @escaping (Result<AppleServerModel, NetworkError>) -> Void)
 }
 
 final class SplashProvider: SplashProviderInputProtocol {
     
     let networkService: NetworkServiceProtocol = NetworkService()
     
-    func fetchData(completionHandler: @escaping (Result<MusicServerModel, NetworkError>) -> Void) {
+    func fetchData(completionHandler: @escaping (Result<AppleServerModel, NetworkError>) -> Void) {
         self.networkService.requestGeneric(requestPayload: SplashRequestDTO.requestData(numeroItems: "20"),
-                                           entityClass: MusicServerModel.self) { [weak self] (result) in
+                                           entityClass: AppleServerModel.self) { [weak self] (result) in
             guard self != nil else { return }
             guard let resultUnw = result else { return }
             completionHandler(.success(resultUnw))

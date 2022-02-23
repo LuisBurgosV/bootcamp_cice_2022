@@ -26,16 +26,37 @@ import Foundation
 
 //Input del interactor
 protocol BookInteractorInputProtocol {
-    
+    func fetchBookFromWebServiceInteractor()
 }
 
 final class BookInteractor: BaseInteractor<BookInteractorOutputProtocol>  {
 
     let provider: BookProviderInputProtocol = BookProvider()
     
+    func transformDataFromMusicServerModelToArrayGenericResult(data: AppleServerModel) -> [GenericResult] {
+        var arrayGenericResult: [GenericResult] = []
+        if let dataUnw = data.feed?.results {
+            for item in dataUnw {
+                let objc = GenericResult(artistName: item.artistName, id: item.id, name: item.name, kind: item.kind, artworkUrl100: item.artworkUrl100, url: item.url, releaseDate: item.releaseDate)
+                arrayGenericResult.append(objc)
+            }
+        }
+        return arrayGenericResult
+    }
+    
 }
 
 //Input del interactor
 extension BookInteractor: BookInteractorInputProtocol {
-    
+    func fetchBookFromWebServiceInteractor() {
+        self.provider.fetchBookFromWebServiceProvider { (result) in
+            switch result {
+            case .success(let modelData):
+                self.presenter?.setDataFromWebInteractor(data: self.transformDataFromMusicServerModelToArrayGenericResult(data: modelData))
+            case .failure(let error):
+                debugPrint(error)
+                //self.presenter?.setAlertMessage(error: error)
+            }
+        }
+    }
 }

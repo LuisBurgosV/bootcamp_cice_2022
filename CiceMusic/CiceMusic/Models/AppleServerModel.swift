@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - MusicServerModel
-struct MusicServerModel: Codable {
+struct AppleServerModel: Codable {
     let feed: Feed?
 
     enum CodingKeys: String, CodingKey {

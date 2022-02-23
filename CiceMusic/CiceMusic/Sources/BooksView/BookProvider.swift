@@ -26,20 +26,29 @@ import Foundation
 
 //Input protocol
 protocol BookProviderInputProtocol {
-    
-    
+    func fetchBookFromWebServiceProvider(completionHandler: @escaping (Result<AppleServerModel, NetworkError>) -> Void)
 }
 
 final class BookProvider: BookProviderInputProtocol {
     
     let networkService: NetworkServiceProtocol = NetworkService()
+    
+    func fetchBookFromWebServiceProvider(completionHandler: @escaping (Result<AppleServerModel, NetworkError>) -> Void) {
+        self.networkService.requestGeneric(requestPayload: BookRequestDTO.requestData(numeroItems: "20"), entityClass: AppleServerModel.self) { [weak self] (result) in
+            guard self != nil else { return }
+            guard let resultUnw = result else { return }
+            completionHandler(.success(resultUnw))
+        } failure: { (error) in
+            completionHandler(.failure(error))
+        }
+    }
 }
 
 struct BookRequestDTO {
     
     static func requestData(numeroItems: String) -> RequestDTO {
         let argument: [CVarArg] = [numeroItems]
-        let urlComplete = String(format: URLEnpoint.music, arguments: argument)
+        let urlComplete = String(format: URLEnpoint.books, arguments: argument)
         let request = RequestDTO(arrayParams: nil, method: .get, endpoint: urlComplete)
         return request
     }

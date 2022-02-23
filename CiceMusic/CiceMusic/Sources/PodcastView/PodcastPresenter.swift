@@ -27,6 +27,8 @@ import Foundation
 //Input del presenter
 protocol PodcastPresenterInputProtocol {
     func fetchPodcastFromWebService()
+    func numberOfRows() -> Int?
+    func informationForCell(indexPath: Int) -> GenericResult?
 }
 
 //Output del Interactor
@@ -44,6 +46,14 @@ final class PodcastPresenter: BasePresenter<PodcastPresenterOutputProtocol, Podc
 extension PodcastPresenter: PodcastPresenterInputProtocol {
     func fetchPodcastFromWebService() {
         self.interactor?.fetchPodcastFromWebServiceInteractor()
+    }
+    
+    func numberOfRows() -> Int? {
+        return self.dataSourceViewModel.count
+    }
+    
+    func informationForCell(indexPath: Int) -> GenericResult? {
+        return self.dataSourceViewModel[indexPath]
     }
     
 }

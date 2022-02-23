@@ -16,7 +16,7 @@ protocol SplashInteractorInputProtocol {
 final class SplashInteractor: BaseInteractor<SplashInteractorOutputProtocol> {
     let splashProvider: SplashProviderInputProtocol = SplashProvider()
     
-    func transformDataFromMusicServerModelToArrayGenericResult(data: MusicServerModel) -> [GenericResult] {
+    func transformDataFromMusicServerModelToArrayGenericResult(data: AppleServerModel) -> [GenericResult] {
         var arrayGenericResult: [GenericResult] = []
         if let dataUnw = data.feed?.results {
             for item in dataUnw {
