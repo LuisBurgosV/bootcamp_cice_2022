@@ -52,6 +52,14 @@
 		0BE4F8F927BED043008017AB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4F8F827BED043008017AB /* Utils.swift */; };
 		0BE4F8FB27BED9A1008017AB /* SplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4F8FA27BED9A1008017AB /* SplashProvider.swift */; };
 		0BE4F8FE27BEE390008017AB /* AppleServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4F8FD27BEE390008017AB /* AppleServerModel.swift */; };
+		0BEDA7E327C94B4800AD4961 /* AppleGenericDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BEDA7DC27C94B4800AD4961 /* AppleGenericDetailViewController.xib */; };
+		0BEDA7E427C94B4800AD4961 /* AppleGenericDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDA7DD27C94B4800AD4961 /* AppleGenericDetailViewController.swift */; };
+		0BEDA7E527C94B4800AD4961 /* AppleGenericDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDA7DE27C94B4800AD4961 /* AppleGenericDetailRouter.swift */; };
+		0BEDA7E627C94B4800AD4961 /* AppleGenericDetailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDA7DF27C94B4800AD4961 /* AppleGenericDetailProvider.swift */; };
+		0BEDA7E727C94B4800AD4961 /* AppleGenericDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDA7E027C94B4800AD4961 /* AppleGenericDetailCoordinator.swift */; };
+		0BEDA7E827C94B4800AD4961 /* AppleGenericDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDA7E127C94B4800AD4961 /* AppleGenericDetailPresenter.swift */; };
+		0BEDA7E927C94B4800AD4961 /* AppleGenericDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDA7E227C94B4800AD4961 /* AppleGenericDetailInteractor.swift */; };
+		0BEDA7EB27C9635400AD4961 /* AppServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDA7EA27C9635400AD4961 /* AppServerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +109,14 @@
 		0BE4F8F827BED043008017AB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0BE4F8FA27BED9A1008017AB /* SplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProvider.swift; sourceTree = "<group>"; };
 		0BE4F8FD27BEE390008017AB /* AppleServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleServerModel.swift; sourceTree = "<group>"; };
+		0BEDA7DC27C94B4800AD4961 /* AppleGenericDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleGenericDetailViewController.xib; sourceTree = "<group>"; };
+		0BEDA7DD27C94B4800AD4961 /* AppleGenericDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailViewController.swift; sourceTree = "<group>"; };
+		0BEDA7DE27C94B4800AD4961 /* AppleGenericDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailRouter.swift; sourceTree = "<group>"; };
+		0BEDA7DF27C94B4800AD4961 /* AppleGenericDetailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailProvider.swift; sourceTree = "<group>"; };
+		0BEDA7E027C94B4800AD4961 /* AppleGenericDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailCoordinator.swift; sourceTree = "<group>"; };
+		0BEDA7E127C94B4800AD4961 /* AppleGenericDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailPresenter.swift; sourceTree = "<group>"; };
+		0BEDA7E227C94B4800AD4961 /* AppleGenericDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailInteractor.swift; sourceTree = "<group>"; };
+		0BEDA7EA27C9635400AD4961 /* AppServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +184,7 @@
 		0B6986F427BD7BF7009D24F8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0BEDA7DB27C94B1E00AD4961 /* AppleGenericDetail */,
 				0BDA6BFE27C103D7000E45ED /* BooksView */,
 				0BDA6BFD27C103C4000E45ED /* PodcastView */,
 				0BDA6BFC27C103BA000E45ED /* MusicView */,
@@ -283,8 +300,23 @@
 			children = (
 				0BE4F8FD27BEE390008017AB /* AppleServerModel.swift */,
 				0BD9353427C40A9C0096D9DF /* PodcastServerModel.swift */,
+				0BEDA7EA27C9635400AD4961 /* AppServerModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0BEDA7DB27C94B1E00AD4961 /* AppleGenericDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0BEDA7DC27C94B4800AD4961 /* AppleGenericDetailViewController.xib */,
+				0BEDA7DD27C94B4800AD4961 /* AppleGenericDetailViewController.swift */,
+				0BEDA7DE27C94B4800AD4961 /* AppleGenericDetailRouter.swift */,
+				0BEDA7DF27C94B4800AD4961 /* AppleGenericDetailProvider.swift */,
+				0BEDA7E027C94B4800AD4961 /* AppleGenericDetailCoordinator.swift */,
+				0BEDA7E127C94B4800AD4961 /* AppleGenericDetailPresenter.swift */,
+				0BEDA7E227C94B4800AD4961 /* AppleGenericDetailInteractor.swift */,
+			);
+			path = AppleGenericDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +388,7 @@
 				0B6986F927BD7C22009D24F8 /* SplashViewController.xib in Resources */,
 				0B6986E427BD74D8009D24F8 /* Assets.xcassets in Resources */,
 				0BDA6C2227C10446000E45ED /* BookViewController.xib in Resources */,
+				0BEDA7E327C94B4800AD4961 /* AppleGenericDetailViewController.xib in Resources */,
 				0BDA6C2C27C106E8000E45ED /* HomeTabBarViewController.xib in Resources */,
 				0BCF370C27C2513000F24964 /* MusicCell.xib in Resources */,
 			);
@@ -372,19 +405,25 @@
 				0B6986DB27BD74D7009D24F8 /* AppDelegate.swift in Sources */,
 				0BE4F8FB27BED9A1008017AB /* SplashProvider.swift in Sources */,
 				0BDA6C1827C10416000E45ED /* PodcastCoordinator.swift in Sources */,
+				0BEDA7E527C94B4800AD4961 /* AppleGenericDetailRouter.swift in Sources */,
 				0BDA6C1727C10416000E45ED /* PodcastProvider.swift in Sources */,
 				0B69870127BD82AC009D24F8 /* SplashCoordinator.swift in Sources */,
 				0B6986FD27BD7DE5009D24F8 /* SplashInteractor.swift in Sources */,
+				0BEDA7EB27C9635400AD4961 /* AppServerModel.swift in Sources */,
+				0BEDA7E627C94B4800AD4961 /* AppleGenericDetailProvider.swift in Sources */,
 				0BDA6C2627C10446000E45ED /* BookCoordinator.swift in Sources */,
+				0BEDA7E927C94B4800AD4961 /* AppleGenericDetailInteractor.swift in Sources */,
 				0BDA6C1927C10416000E45ED /* PodcastPresenter.swift in Sources */,
 				0B6986FF27BD7DF0009D24F8 /* SplashRouter.swift in Sources */,
 				0BDA6C2327C10446000E45ED /* BookViewController.swift in Sources */,
+				0BEDA7E427C94B4800AD4961 /* AppleGenericDetailViewController.swift in Sources */,
 				0BE4F8F427BECE44008017AB /* NetworkService.swift in Sources */,
 				0BDA6C2527C10446000E45ED /* BookProvider.swift in Sources */,
 				0BDA6C2B27C106E8000E45ED /* HomeTabBarViewController.swift in Sources */,
 				0BDA6C1527C10416000E45ED /* PodcastViewController.swift in Sources */,
 				0B6986FB27BD7C77009D24F8 /* SplashPresenter.swift in Sources */,
 				0BDA6C2427C10446000E45ED /* BookRouter.swift in Sources */,
+				0BEDA7E727C94B4800AD4961 /* AppleGenericDetailCoordinator.swift in Sources */,
 				0BDA6C0727C10406000E45ED /* MusicViewController.swift in Sources */,
 				0BDA6C2E27C10707000E45ED /* HomeTabBarCoordinator.swift in Sources */,
 				0BDA6C1627C10416000E45ED /* PodcastRouter.swift in Sources */,
@@ -403,6 +442,7 @@
 				0B6986F027BD7663009D24F8 /* AppCoreCoordinator.swift in Sources */,
 				0B6986F827BD7C22009D24F8 /* SplashViewController.swift in Sources */,
 				0BE4F8F627BECF9D008017AB /* NetworkError.swift in Sources */,
+				0BEDA7E827C94B4800AD4961 /* AppleGenericDetailPresenter.swift in Sources */,
 				0BDA6C1A27C10416000E45ED /* PodcastInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
