@@ -25,22 +25,22 @@ POSSIBILITY OF SUCH DAMAGE.
 import Foundation
 
 //Input protocol
-protocol MusicProviderInputProtocol {
+protocol MenuProviderInputProtocol {
     
     
 }
 
-final class MusicProvider: MusicProviderInputProtocol {
+final class MenuProvider: MenuProviderInputProtocol {
     
     let networkService: NetworkServiceProtocol = NetworkService()
 }
 
-struct MusicRequestDTO {
+struct MenuRequestDTO {
     
     static func requestData(numeroItems: String) -> RequestDTO {
         let argument: [CVarArg] = [numeroItems]
         let urlComplete = String(format: URLEnpoint.music, arguments: argument)
-        let request = RequestDTO(arrayParams: nil, method: .get, endpoint: urlComplete, urlContext: .webService)
+        let request = RequestDTO(arrayParams: nil, method: .get, endpoint: urlComplete, urlContext: .heroku)
         return request
     }
 }

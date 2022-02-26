@@ -15,31 +15,92 @@ enum HTTPMethods: String {
     case options = "OPTIONS"
 }
 
+enum TargetsEnvironment: Int {
+    case DEV = 0
+    case PRE = 1
+    case PRO = 3
+}
+
 struct RequestDTO {
     var params: [String: AnyObject]?
     var arrayParams: [[String: AnyObject]]?
     var method: HTTPMethods
     var endpoint: String
+    var urlContext: URLEnpoint.BaseUrlContext
     
-    init(params: [String: AnyObject]?, method: HTTPMethods, endpoint: String) {
+    init(params: [String: AnyObject]?, method: HTTPMethods, endpoint: String, urlContext: URLEnpoint.BaseUrlContext) {
         self.params = params
         self.method = method
         self.endpoint = endpoint
+        self.urlContext = urlContext
     }
     
-    init(arrayParams: [[String: AnyObject]]?, method: HTTPMethods, endpoint: String) {
+    init(arrayParams: [[String: AnyObject]]?, method: HTTPMethods, endpoint: String, urlContext: URLEnpoint.BaseUrlContext) {
         self.arrayParams = arrayParams
         self.method = method
         self.endpoint = endpoint
+        self.urlContext = urlContext
     }
 }
 
 struct URLEnpoint {
+    
+    #if DEV
+    static let environmentDefault: TargetsEnvironment = TargetsEnvironment.DEV
+    #elseif PRE
+    static let environmentDefault: TargetsEnvironment = TargetsEnvironment.PRE
+    #else
+    static let environmentDefault: TargetsEnvironment = TargetsEnvironment.PRO
+    #endif
+    
+    enum BaseUrlContext {
+        case backend
+        case webService
+        case heroku
+    }
+    
     static let baseUrl = "https://rss.applemarketingtools.com/api/v2/%@/"
     static let music = "music/most-played/%@/songs.json"
     static let podcast = "podcasts/top/%@/podcast-episodes.json"
     static let books = "books/top-free/%@/books.json"
     static let apps = "apps/top-free/%@/apps.json"
+    
+    static let baseUrlHeroku = "https://icospartan-app.herokuapp.com/"
+    static let menu = "iCoMenuResponse"
+}
+
+extension URLEnpoint {
+    static func getUrlBase(urlContext: BaseUrlContext) -> String {
+        switch urlContext {
+        case .backend:
+            switch self.environmentDefault {
+            case .DEV:
+                return "https://www.azurecloud.com/api/v2/des-mgmt"
+            case .PRE:
+                return "https://www.azurecloud.com/api/v2/pre-devls"
+            case .PRO:
+                return "https://www.azurecloud.com/api/v2/pro-mrk"
+            }
+        case .webService:
+            switch self.environmentDefault {
+            case .DEV:
+                return ""
+            case .PRE:
+                return ""
+            case .PRO:
+                return "https://rss.applemarketingtools.com/api/v2/us/"
+            }
+        case .heroku:
+            switch self.environmentDefault {
+            case .DEV:
+                return ""
+            case .PRE:
+                return ""
+            case .PRO:
+                return "https://icospartan-app.herokuapp.com/"
+            }
+        }
+    }
 }
 
 class Utils {
@@ -66,5 +127,14 @@ protocol ReuseIdentifierProtocol: AnyObject {
 extension ReuseIdentifierProtocol where Self: UIView {
     static var defaultReuseIdentifier: String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
+    }
+}
+
+extension UIViewController {
+    func menuButton() {
+        let menuButton = UIBarButtonItem(image: UIImage(named: "menu_Iz"), style: .plain, target: revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
+        revealViewController().rightViewRevealWidth = 150
+        revealViewController().panGestureRecognizer()
+        self.navigationItem.leftBarButtonItem = menuButton
     }
 }

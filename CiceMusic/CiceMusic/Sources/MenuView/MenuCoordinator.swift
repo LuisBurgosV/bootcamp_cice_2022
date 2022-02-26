@@ -24,23 +24,38 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import Foundation
 
-//Input protocol
-protocol MusicProviderInputProtocol {
-    
-    
-}
+// MARK: - module builder
 
-final class MusicProvider: MusicProviderInputProtocol {
-    
-    let networkService: NetworkServiceProtocol = NetworkService()
-}
+final class MenuCoordinator {
 
-struct MusicRequestDTO {
-    
-    static func requestData(numeroItems: String) -> RequestDTO {
-        let argument: [CVarArg] = [numeroItems]
-        let urlComplete = String(format: URLEnpoint.music, arguments: argument)
-        let request = RequestDTO(arrayParams: nil, method: .get, endpoint: urlComplete, urlContext: .webService)
-        return request
+    static func navigation(dto: MenuCoordinatorDTO? = nil) -> BaseNavigation {
+        BaseNavigation(rootViewController: view())
     }
+    
+    static func view(dto: MenuCoordinatorDTO? = nil) -> MenuViewController & MenuPresenterOutputProtocol {
+        let vc = MenuViewController()
+        vc.presenter = presenter(vc: vc)
+        return vc
+    }
+    
+    static func presenter(vc: MenuViewController) -> MenuPresenterInputProtocol & MenuInteractorOutputProtocol {
+        let presenter = MenuPresenter(vc: vc)
+        presenter.interactor = interactor(presenter: presenter)
+        presenter.router = router(vc: vc)
+        return presenter
+    }
+    
+    static func interactor(presenter: MenuPresenter) -> MenuInteractorInputProtocol {
+        let interactor = MenuInteractor(presenter: presenter)
+        return interactor
+    }
+    
+    static func router(vc: MenuViewController) -> MenuRouterInputProtocol{
+        let router = MenuRouter(view: vc)
+        return router
+    }
+}
+
+struct MenuCoordinatorDTO {
+    
 }

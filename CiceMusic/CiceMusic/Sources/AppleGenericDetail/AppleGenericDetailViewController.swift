@@ -73,6 +73,7 @@ class AppleGenericDetailViewController: BaseView<AppleGenericDetailPresenterInpu
     private func configuracionCollectionView() {
         self.appsCollectionView.delegate = self
         self.appsCollectionView.dataSource = self
+        self.appsCollectionView.register(UINib(nibName: AppsCell.defaultReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: AppsCell.defaultReuseIdentifier)
     }
 }
 
@@ -90,10 +91,15 @@ extension AppleGenericDetailViewController: UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return self.presenter?.numberOfRows() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        let appCell = self.appsCollectionView.dequeueReusableCell(withReuseIdentifier: AppsCell.defaultReuseIdentifier, for: indexPath) as! AppsCell
+        if let model = self.presenter?.informationForIndexPath(indexPath: indexPath.row) {
+            appCell.setupCell(data: model)
+        }
+        return appCell
     }
 }

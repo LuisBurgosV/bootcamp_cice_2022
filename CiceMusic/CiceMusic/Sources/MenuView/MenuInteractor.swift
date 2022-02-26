@@ -24,23 +24,18 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import Foundation
 
-//Input protocol
-protocol MusicProviderInputProtocol {
-    
+//Input del interactor
+protocol MenuInteractorInputProtocol {
     
 }
 
-final class MusicProvider: MusicProviderInputProtocol {
+final class MenuInteractor: BaseInteractor<MenuInteractorOutputProtocol>  {
+
+    let provider: MenuProviderInputProtocol = MenuProvider()
     
-    let networkService: NetworkServiceProtocol = NetworkService()
 }
 
-struct MusicRequestDTO {
+//Input del interactor
+extension MenuInteractor: MenuInteractorInputProtocol {
     
-    static func requestData(numeroItems: String) -> RequestDTO {
-        let argument: [CVarArg] = [numeroItems]
-        let urlComplete = String(format: URLEnpoint.music, arguments: argument)
-        let request = RequestDTO(arrayParams: nil, method: .get, endpoint: urlComplete, urlContext: .webService)
-        return request
-    }
 }

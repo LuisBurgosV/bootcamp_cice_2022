@@ -38,6 +38,7 @@ class BookViewController: BaseView<BookPresenterInputProtocol> {
         super.viewDidLoad()
         self.presenter?.fetchBookFromWebService()
         self.configurationTV()
+        self.menuButton()
     }
     
     private func configurationTV() {
