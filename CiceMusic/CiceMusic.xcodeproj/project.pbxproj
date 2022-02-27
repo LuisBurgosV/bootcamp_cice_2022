@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B442FCA27CB8B1800F87707 /* MenuServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B442FC927CB8B1800F87707 /* MenuServerModel.swift */; };
+		0B442FCE27CBAAF100F87707 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B442FCC27CBAAF100F87707 /* MenuCell.swift */; };
+		0B442FCF27CBAAF100F87707 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B442FCD27CBAAF100F87707 /* MenuCell.xib */; };
 		0B6986DB27BD74D7009D24F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6986DA27BD74D7009D24F8 /* AppDelegate.swift */; };
 		0B6986E427BD74D8009D24F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6986E327BD74D8009D24F8 /* Assets.xcassets */; };
 		0B6986E727BD74D8009D24F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6986E527BD74D8009D24F8 /* LaunchScreen.storyboard */; };
@@ -73,6 +76,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B442FC927CB8B1800F87707 /* MenuServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuServerModel.swift; sourceTree = "<group>"; };
+		0B442FCC27CBAAF100F87707 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		0B442FCD27CBAAF100F87707 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		0B6986D727BD74D7009D24F8 /* CiceMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B6986DA27BD74D7009D24F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B6986E327BD74D8009D24F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +159,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B442FCB27CBAAD700F87707 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0B442FCC27CBAAF100F87707 /* MenuCell.swift */,
+				0B442FCD27CBAAF100F87707 /* MenuCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		0B6986CE27BD74D7009D24F8 = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +340,7 @@
 				0BE4F8FD27BEE390008017AB /* AppleServerModel.swift */,
 				0BD9353427C40A9C0096D9DF /* PodcastServerModel.swift */,
 				0BEDA7EA27C9635400AD4961 /* AppServerModel.swift */,
+				0B442FC927CB8B1800F87707 /* MenuServerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -366,6 +382,7 @@
 		0BF7E98627CA3EAA002DE8A6 /* MenuView */ = {
 			isa = PBXGroup;
 			children = (
+				0B442FCB27CBAAD700F87707 /* Cell */,
 				0BF7E98727CA3F0C002DE8A6 /* MenuViewController.xib */,
 				0BF7E98827CA3F0C002DE8A6 /* MenuViewController.swift */,
 				0BF7E98927CA3F0C002DE8A6 /* MenuRouter.swift */,
@@ -447,6 +464,7 @@
 				0B6986F927BD7C22009D24F8 /* SplashViewController.xib in Resources */,
 				0B6986E427BD74D8009D24F8 /* Assets.xcassets in Resources */,
 				0BF7E98027CA2B8E002DE8A6 /* AppsCell.xib in Resources */,
+				0B442FCF27CBAAF100F87707 /* MenuCell.xib in Resources */,
 				0BDA6C2227C10446000E45ED /* BookViewController.xib in Resources */,
 				0BF7E98E27CA3F0C002DE8A6 /* MenuViewController.xib in Resources */,
 				0BEDA7E327C94B4800AD4961 /* AppleGenericDetailViewController.xib in Resources */,
@@ -464,6 +482,7 @@
 			files = (
 				0BE4F8FE27BEE390008017AB /* AppleServerModel.swift in Sources */,
 				0B6986DB27BD74D7009D24F8 /* AppDelegate.swift in Sources */,
+				0B442FCE27CBAAF100F87707 /* MenuCell.swift in Sources */,
 				0BE4F8FB27BED9A1008017AB /* SplashProvider.swift in Sources */,
 				0BDA6C1827C10416000E45ED /* PodcastCoordinator.swift in Sources */,
 				0BEDA7E527C94B4800AD4961 /* AppleGenericDetailRouter.swift in Sources */,
@@ -491,6 +510,7 @@
 				0BF7E99027CA3F0C002DE8A6 /* MenuRouter.swift in Sources */,
 				0BF7E99427CA3F0C002DE8A6 /* MenuInteractor.swift in Sources */,
 				0BDA6C1627C10416000E45ED /* PodcastRouter.swift in Sources */,
+				0B442FCA27CB8B1800F87707 /* MenuServerModel.swift in Sources */,
 				0BDA6C0A27C10406000E45ED /* MusicCoordinator.swift in Sources */,
 				0BDA6C0827C10406000E45ED /* MusicRouter.swift in Sources */,
 				0BDA6C0C27C10406000E45ED /* MusicInteractor.swift in Sources */,

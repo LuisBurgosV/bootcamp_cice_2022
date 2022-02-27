@@ -59,13 +59,11 @@ struct URLEnpoint {
         case heroku
     }
     
-    static let baseUrl = "https://rss.applemarketingtools.com/api/v2/%@/"
-    static let music = "music/most-played/%@/songs.json"
-    static let podcast = "podcasts/top/%@/podcast-episodes.json"
-    static let books = "books/top-free/%@/books.json"
-    static let apps = "apps/top-free/%@/apps.json"
+    static let music = "%@/music/most-played/%@/songs.json"
+    static let podcast = "%@/podcasts/top/%@/podcast-episodes.json"
+    static let books = "%@/books/top-free/%@/books.json"
+    static let apps = "%@/apps/top-free/%@/apps.json"
     
-    static let baseUrlHeroku = "https://icospartan-app.herokuapp.com/"
     static let menu = "iCoMenuResponse"
 }
 
@@ -110,6 +108,8 @@ class Utils {
         let kPassword = "PASSWORD"
         let kUsuarioLogado = "USUARIO_LOGADO"
         let kPrefer = UserDefaults.standard
+        let BearerAuthentication = "Bearer 123456789"
+        let Authentication = "Authorization"
     }
     
     static func showAlert(title: String, message: String) -> UIAlertController {
