@@ -9,7 +9,7 @@ import Foundation
 
 //Input del presenter
 protocol SplashPresenterInputProtocol {
-    func fettchDataFromWebService()
+    func fetchDataFromWebService()
     func showHomeTabBar()
 }
 
@@ -27,7 +27,7 @@ final class SplashPresenter: BasePresenter<SplashPresenterOutputProtocol, Splash
 
 //Input del presenter
 extension SplashPresenter: SplashPresenterInputProtocol {
-    func fettchDataFromWebService() {
+    func fetchDataFromWebService() {
         self.interactor?.fettchDataFromWebServiceInteractor()
     }
     

@@ -24,7 +24,7 @@ class SplashViewController: BaseView<SplashPresenterInputProtocol> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter?.fettchDataFromWebService()
+        self.presenter?.fetchDataFromWebService()
 
         // Do any additional setup after loading the view.
     }

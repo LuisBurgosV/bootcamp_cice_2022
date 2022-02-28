@@ -8,17 +8,18 @@
 import Foundation
 
 protocol NetworkServiceProtocol {
+    
     func requestGeneric<M: Decodable>(requestPayload: RequestDTO,
                                       entityClass: M.Type,
-                                      success: @escaping(M?) -> Void,
-                                      failure: @escaping(NetworkError) -> Void)
+                                      success: @escaping (M?) -> Void,
+                                      failure: @escaping (NetworkError) -> Void)
 }
 
 final class NetworkService: NetworkServiceProtocol {
     
     typealias HTTPHeaders = [String: String]
     let defaultHTTPHeaders: HTTPHeaders = {
-        return[Utils.Constantes().Authentication: Utils.Constantes().BearerAuthentication]
+        return [Utils.Constantes().Authetication: Utils.Constantes().BearerAuthetication]
     }()
     
     func requestGeneric<M>(requestPayload: RequestDTO,
@@ -28,19 +29,21 @@ final class NetworkService: NetworkServiceProtocol {
         
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig)
-        let baseUrl = URLEnpoint.getUrlBase(urlContext: requestPayload.urlContext)
+        let baseUrl =  URLEnpoint.getUrlBase(urlContext: requestPayload.urlContext)
         let endpoint = "\(baseUrl)\(requestPayload.endpoint)"
         
         guard let urlUnw = URL(string: endpoint) else {
             failure(NetworkError(status: .unsupportedURL))
             return
         }
+        
         var urlRequest = URLRequest(url: urlUnw)
         let headers = defaultHTTPHeaders
+        
         headers.forEach { (key, value) in
             urlRequest.setValue(value, forHTTPHeaderField: key)
         }
-        
+
         session.dataTask(with: urlRequest) { [weak self] (data, response, error) in
             guard self != nil else { return }
             if let errorUnw = error {
@@ -55,7 +58,6 @@ final class NetworkService: NetworkServiceProtocol {
                 failure(NetworkError(status: .noContent))
                 return
             }
-            
             do {
                 let jsonObject = try JSONDecoder().decode(entityClass.self, from: dataUnw)
                 DispatchQueue.main.async {
@@ -68,4 +70,6 @@ final class NetworkService: NetworkServiceProtocol {
         .resume()
         session.finishTasksAndInvalidate()
     }
+    
+    
 }

@@ -5,7 +5,9 @@
 //  Created by Luis Burgos on 17/2/22.
 //
 
+import Foundation
 import UIKit
+import MessageUI
 
 enum HTTPMethods: String {
     case get = "GET"
@@ -15,7 +17,7 @@ enum HTTPMethods: String {
     case options = "OPTIONS"
 }
 
-enum TargetsEnvironment: Int {
+enum TargetEnvironment: Int {
     case DEV = 0
     case PRE = 1
     case PRO = 3
@@ -46,14 +48,14 @@ struct RequestDTO {
 struct URLEnpoint {
     
     #if DEV
-    static let environmentDefault: TargetsEnvironment = TargetsEnvironment.DEV
+    static let environmentDefault: TargetEnvironment = TargetEnvironment.DEV
     #elseif PRE
-    static let environmentDefault: TargetsEnvironment = TargetsEnvironment.PRE
+    static let environmentDefault: TargetEnvironment = TargetEnvironment.PRE
     #else
-    static let environmentDefault: TargetsEnvironment = TargetsEnvironment.PRO
+    static let environmentDefault: TargetEnvironment = TargetEnvironment.PRO
     #endif
     
-    enum BaseUrlContext {
+    enum BaseUrlContext{
         case backend
         case webService
         case heroku
@@ -65,13 +67,15 @@ struct URLEnpoint {
     static let apps = "%@/apps/top-free/%@/apps.json"
     
     static let menu = "iCoMenuResponse"
+    static let tipsTraining = "iCoResponseConsejos"
+    
 }
 
-extension URLEnpoint {
+extension URLEnpoint{
     static func getUrlBase(urlContext: BaseUrlContext) -> String {
-        switch urlContext {
-        case .backend:
-            switch self.environmentDefault {
+        switch urlContext{
+        case.backend:
+            switch self.environmentDefault{
             case .DEV:
                 return "https://www.azurecloud.com/api/v2/des-mgmt"
             case .PRE:
@@ -80,18 +84,18 @@ extension URLEnpoint {
                 return "https://www.azurecloud.com/api/v2/pro-mrk"
             }
         case .webService:
-            switch self.environmentDefault {
+            switch self.environmentDefault{
             case .DEV:
-                return ""
+                return "https://rss.applemarketingtools.com/api/v2/"
             case .PRE:
                 return ""
             case .PRO:
-                return "https://rss.applemarketingtools.com/api/v2/us/"
+                return "https://rss.applemarketingtools.com/api/v2/"
             }
         case .heroku:
-            switch self.environmentDefault {
+            switch self.environmentDefault{
             case .DEV:
-                return ""
+                return "https://icospartan-app.herokuapp.com/"
             case .PRE:
                 return ""
             case .PRO:
@@ -102,14 +106,14 @@ extension URLEnpoint {
 }
 
 class Utils {
-    
+  
     struct Constantes {
         let kUsername = "USERNAME"
         let kPassword = "PASSWORD"
         let kUsuarioLogado = "USUARIO_LOGADO"
         let kPrefer = UserDefaults.standard
-        let BearerAuthentication = "Bearer 123456789"
-        let Authentication = "Authorization"
+        let BearerAuthetication = "Bearer 123456789"
+        let Authetication = "Authorization"
     }
     
     static func showAlert(title: String, message: String) -> UIAlertController {
@@ -117,11 +121,20 @@ class Utils {
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         return alertVC
     }
+    
+    static func configuracionMailCompose(delegate: MFMailComposeViewControllerDelegate, data: [String]) -> MFMailComposeViewController {
+        let mailCompo = MFMailComposeViewController()
+        mailCompo.mailComposeDelegate = delegate
+        mailCompo.setToRecipients(["info@mail.com", "masinfo@mail.es"])
+        mailCompo.setSubject("este es en mensaje para el equipo de soporte")
+        let emailBody = "Los datos del formualario de registro son \(data)"
+        mailCompo.setMessageBody(emailBody, isHTML: false)
+        return mailCompo
+    }
 }
 
 protocol ReuseIdentifierProtocol: AnyObject {
     static var defaultReuseIdentifier: String { get }
-    
 }
 
 extension ReuseIdentifierProtocol where Self: UIView {
@@ -132,7 +145,10 @@ extension ReuseIdentifierProtocol where Self: UIView {
 
 extension UIViewController {
     func menuButton() {
-        let menuButton = UIBarButtonItem(image: UIImage(named: "menu_Iz"), style: .plain, target: revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
+        let menuButton = UIBarButtonItem(image: UIImage(named: "menu_Iz"),
+                                         style: .plain,
+                                         target: revealViewController(),
+                                         action: #selector(SWRevealViewController.revealToggle(_:)))
         revealViewController().rightViewRevealWidth = 150
         revealViewController().panGestureRecognizer()
         self.navigationItem.leftBarButtonItem = menuButton

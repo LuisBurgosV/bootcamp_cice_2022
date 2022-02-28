@@ -28,10 +28,28 @@ class MenuCell: UITableViewCell, ReuseIdentifierProtocol {
         // Configure the view for the selected state
     }
     
+    private func showImageWithName(data: Menu) -> UIImage {
+        switch data.imagen {
+        case "iconoAvatar":
+            return #imageLiteral(resourceName: "iconoAvatar")
+        case "musicAvatar":
+            return #imageLiteral(resourceName: "musicAvatar")
+        case "calendarioAvatar":
+            return #imageLiteral(resourceName: "calendarioAvatar")
+        case "consejosAvatar":
+            return #imageLiteral(resourceName: "consejosAvatar")
+        default:
+            return #imageLiteral(resourceName: "nosotrosAvatar")
+        }
+    }
+    
 }
 
 extension MenuCell: MenuCellProtocol {
     func setupCell(data: MenuResponse) {
-        self.nameMenuLBL.text = data.menu?.literal
+        if let dataUnw = data.menu {
+            self.nameMenuLBL.text = dataUnw.literal
+            self.iconImageView.image = self.showImageWithName(data: dataUnw)
+        }
     }
 }
