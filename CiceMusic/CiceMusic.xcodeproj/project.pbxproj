@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0B03557827CEA901006DA847 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B03557A27CEA901006DA847 /* Localizable.strings */; };
+		0B086F6F27D13F7E005295E5 /* AlertDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B086F6D27D13F7E005295E5 /* AlertDefaultViewController.swift */; };
+		0B086F7027D13F7E005295E5 /* AlertDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B086F6E27D13F7E005295E5 /* AlertDefaultViewController.xib */; };
+		0B086F7327D146BA005295E5 /* CustomAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B086F7227D146BA005295E5 /* CustomAlertManager.swift */; };
+		0B086F7527D14842005295E5 /* LocalizedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B086F7427D14841005295E5 /* LocalizedKeys.swift */; };
 		0B2CFC9F27CD643A000D45F3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2CFC9827CD643A000D45F3 /* LoginViewController.xib */; };
 		0B2CFCA027CD643A000D45F3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2CFC9927CD643A000D45F3 /* LoginViewController.swift */; };
 		0B2CFCA127CD643A000D45F3 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2CFC9A27CD643A000D45F3 /* LoginRouter.swift */; };
@@ -88,6 +92,10 @@
 		0B03557B27CEA905006DA847 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0B03557C27CEA906006DA847 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0B03557D27CEA907006DA847 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0B086F6D27D13F7E005295E5 /* AlertDefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDefaultViewController.swift; sourceTree = "<group>"; };
+		0B086F6E27D13F7E005295E5 /* AlertDefaultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertDefaultViewController.xib; sourceTree = "<group>"; };
+		0B086F7227D146BA005295E5 /* CustomAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertManager.swift; sourceTree = "<group>"; };
+		0B086F7427D14841005295E5 /* LocalizedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeys.swift; sourceTree = "<group>"; };
 		0B2CFC9827CD643A000D45F3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		0B2CFC9927CD643A000D45F3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B2CFC9A27CD643A000D45F3 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -186,6 +194,32 @@
 			path = Localizables;
 			sourceTree = "<group>";
 		};
+		0B086F6B27D13F46005295E5 /* CustomsAlerts */ = {
+			isa = PBXGroup;
+			children = (
+				0B086F6C27D13F5E005295E5 /* AlertDefault */,
+			);
+			path = CustomsAlerts;
+			sourceTree = "<group>";
+		};
+		0B086F6C27D13F5E005295E5 /* AlertDefault */ = {
+			isa = PBXGroup;
+			children = (
+				0B086F6D27D13F7E005295E5 /* AlertDefaultViewController.swift */,
+				0B086F6E27D13F7E005295E5 /* AlertDefaultViewController.xib */,
+			);
+			path = AlertDefault;
+			sourceTree = "<group>";
+		};
+		0B086F7127D146A4005295E5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0B086F7227D146BA005295E5 /* CustomAlertManager.swift */,
+				0B086F7427D14841005295E5 /* LocalizedKeys.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		0B2CFC9727CD63D7000D45F3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +262,8 @@
 		0B6986D927BD74D7009D24F8 /* CiceMusic */ = {
 			isa = PBXGroup;
 			children = (
+				0B086F7127D146A4005295E5 /* Managers */,
+				0B086F6B27D13F46005295E5 /* CustomsAlerts */,
 				0B03557227CEA7BC006DA847 /* Localizables */,
 				0BF7E98127CA3199002DE8A6 /* MenuLateral */,
 				0BD9353627C40ECD0096D9DF /* ViewModels */,
@@ -518,6 +554,7 @@
 				0BEDA7E327C94B4800AD4961 /* AppleGenericDetailViewController.xib in Resources */,
 				0BDA6C2C27C106E8000E45ED /* HomeTabBarViewController.xib in Resources */,
 				0BCF370C27C2513000F24964 /* MusicCell.xib in Resources */,
+				0B086F7027D13F7E005295E5 /* AlertDefaultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +590,7 @@
 				0BEDA7E427C94B4800AD4961 /* AppleGenericDetailViewController.swift in Sources */,
 				0BE4F8F427BECE44008017AB /* NetworkService.swift in Sources */,
 				0BDA6C2527C10446000E45ED /* BookProvider.swift in Sources */,
+				0B086F7327D146BA005295E5 /* CustomAlertManager.swift in Sources */,
 				0BDA6C2B27C106E8000E45ED /* HomeTabBarViewController.swift in Sources */,
 				0BDA6C1527C10416000E45ED /* PodcastViewController.swift in Sources */,
 				0B6986FB27BD7C77009D24F8 /* SplashPresenter.swift in Sources */,
@@ -568,12 +606,14 @@
 				0BDA6C0827C10406000E45ED /* MusicRouter.swift in Sources */,
 				0BDA6C0C27C10406000E45ED /* MusicInteractor.swift in Sources */,
 				0BDA6C0927C10406000E45ED /* MusicProvider.swift in Sources */,
+				0B086F7527D14842005295E5 /* LocalizedKeys.swift in Sources */,
 				0B6986F327BD7969009D24F8 /* BaseVIPER.swift in Sources */,
 				0BF7E98527CA329C002DE8A6 /* SWRevealViewController .m in Sources */,
 				0BE4F8F927BED043008017AB /* Utils.swift in Sources */,
 				0BDA6C0B27C10406000E45ED /* MusicPresenter.swift in Sources */,
 				0BCF370B27C2513000F24964 /* MusicCell.swift in Sources */,
 				0B2CFCA227CD643A000D45F3 /* LoginProvider.swift in Sources */,
+				0B086F6F27D13F7E005295E5 /* AlertDefaultViewController.swift in Sources */,
 				0BDA6C2727C10446000E45ED /* BookPresenter.swift in Sources */,
 				0BD9353827C40EE50096D9DF /* AppleViewModel.swift in Sources */,
 				0BDA6C2827C10446000E45ED /* BookInteractor.swift in Sources */,
