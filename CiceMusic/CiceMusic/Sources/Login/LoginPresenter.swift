@@ -42,10 +42,10 @@ final class LoginPresenter: BasePresenter<LoginPresenterOutputProtocol, LoginInt
 extension LoginPresenter: LoginPresenterInputProtocol {
  
     func showCustomAlertFailure(){
-        //self.router?.showCustomAlert(delegate: self, model: CustomAlertManager.init(type: .failureLogin))
+        self.router?.showCustomAlert(delegate: self, model: CustomAlertManager.init(type: .failureLogin))
     }
     func showCustomAlertSuccess(){
-        //self.router?.showCustomAlert(delegate: self, model: CustomAlertManager.init(type: .succesLogin))
+        self.router?.showCustomAlert(delegate: self, model: CustomAlertManager.init(type: .successLogin))
     }
 }
 
@@ -54,16 +54,15 @@ extension LoginPresenter: LoginInteractorOutputProtocol {
     
 }
 
-//extension LoginPresenter: AlertDefaultViewControllerDelegate{
-//
-//    func primaryButtonPressed() {
-//        guard let menuResponseUnw = self.dataModel?.dataModel else { return }
-//        self.router?.showHomeTabBar(data: menuResponseUnw)
-//    }
-//
-//    func secondButtonPresses() {
-//        //
-//    }
-//
-//
-//}
+extension LoginPresenter: AlertDefaultViewControllerDelegate{
+
+    func primaryButtonPressed() {
+        guard let menuResponseUnw = self.dataModel?.dataModel else { return }
+        self.router?.showHomeTabBar(data: menuResponseUnw)
+    }
+    
+    func secondButtonPressed() {
+        //
+    }
+    
+}
