@@ -20,9 +20,9 @@ final class HomeTabBarCoordinator {
         //Icons
         let iconMusic = UITabBarItem(title: "Music", image: UIImage(systemName: "music.note.list"), selectedImage: UIImage(systemName: "music.note.list"))
         
-        let iconPodcast = UITabBarItem(title: "Music", image: UIImage(systemName: "music.note.house.fill"), selectedImage: UIImage(systemName: "music.note.house.fill"))
+        let iconPodcast = UITabBarItem(title: "Books", image: UIImage(systemName: "music.note.house.fill"), selectedImage: UIImage(systemName: "music.note.house.fill"))
         
-        let iconBooks = UITabBarItem(title: "Music", image: UIImage(systemName: "book"), selectedImage: UIImage(systemName: "book.fill"))
+        let iconBooks = UITabBarItem(title: "Podcast", image: UIImage(systemName: "book"), selectedImage: UIImage(systemName: "book.fill"))
         
         //Asignamos el icono al controlador
         musicVC.tabBarItem = iconMusic

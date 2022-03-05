@@ -1,0 +1,14 @@
+//GENERAL
+"general_accept" = "Accept";
+"general_cancel" = "Cancel";
+
+//LOGIN
+"title_my_alert_login_success" = "Congratulations!";
+"message_my_alert_login_success" = "Now you will have access to music, podcast and books iTunes portal";
+"title_my_alert_login_failure" = "Something went wrong";
+"message_my_alert_login_failure" = "you have to complete the username and password field";
+
+//REGISTRO
+
+
+//BUROFAX

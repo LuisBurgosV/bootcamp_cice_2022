@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertDefaultViewController" customModule="CiceMusic" customModuleProvider="target">
             <connections>
+                <outlet property="alertContentView" destination="hXd-9s-SmM" id="n6y-ad-b6o"/>
                 <outlet property="backgroundContentView" destination="PQW-XL-sLq" id="zrF-Kx-C3m"/>
                 <outlet property="closeBTN" destination="yrS-G0-slm" id="Ic2-Zd-1ym"/>
                 <outlet property="constHeightAcceptButton" destination="xSG-Dp-g0T" id="hGO-7j-pdt"/>
@@ -41,7 +42,8 @@
                                 <constraint firstAttribute="height" constant="44" id="bgc-3U-fft"/>
                                 <constraint firstAttribute="width" constant="44" id="ldg-DQ-Xqr"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="X"/>
                             <connections>
                                 <action selector="closeACTION:" destination="-1" eventType="touchUpInside" id="oeW-m3-Qmp"/>

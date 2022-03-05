@@ -32,7 +32,7 @@ class AlertDefaultViewController: UIViewController {
     @IBOutlet weak var constHeightAcceptButton: NSLayoutConstraint!
     
     @IBOutlet weak var backgroundContentView: UIView!
-    
+    @IBOutlet weak var alertContentView: UIView!
     
     //MARK: - IBActions
     @IBAction func closeACTION(_ sender: UIButton) {
@@ -62,6 +62,10 @@ class AlertDefaultViewController: UIViewController {
     
     private func configuracionUI() {
         self.backgroundContentView.alpha = 0.5
+        self.primaryBTN.layer.cornerRadius = 25
+        self.secondaryBTN.layer.cornerRadius = 25
+        self.alertContentView.layer.cornerRadius = 10
+        
         switch alertManager?.type {
         case .successLogin:
             self.titleAlertLBL.text = alertManager?.successLoginTitle
@@ -71,12 +75,30 @@ class AlertDefaultViewController: UIViewController {
             self.closeBTN.isHidden = true
             self.constHeightButtonClose.constant = 0
             self.constHeightCancelButton.constant = 0
+            
         case .failureLogin:
             self.titleAlertLBL.text = alertManager?.failureLoginTitle
             self.messageAlertLBL.text = alertManager?.failureLoginMessage
             self.primaryBTN.isHidden = true
             self.secondaryBTN.setTitle(alertManager?.secondButton, for: .normal)
             self.constHeightAcceptButton.constant = 0
+            
+        case .cantSendMail:
+            self.titleAlertLBL.text = alertManager?.failureMailTitle
+            self.messageAlertLBL.text = alertManager?.failureMailMessage
+            self.primaryBTN.isHidden = true
+            self.secondaryBTN.setTitle(alertManager?.secondButton, for: .normal)
+            self.constHeightAcceptButton.constant = 0
+            
+        case .generalConfirmation:
+            self.titleAlertLBL.text = alertManager?.confirmationTitle
+            self.messageAlertLBL.text = alertManager?.confirmationMessage
+            self.primaryBTN.setTitle(alertManager?.primaryButton, for: .normal)
+            self.secondaryBTN.isHidden = true
+            self.closeBTN.isHidden = true
+            self.constHeightButtonClose.constant = 0
+            self.constHeightCancelButton.constant = 0
+            
         default:
             self.titleAlertLBL.text = "AQUI LUIS"
             self.messageAlertLBL.text = "Y SI PASA ALGO ??"
@@ -84,5 +106,4 @@ class AlertDefaultViewController: UIViewController {
             self.secondaryBTN.setTitle(alertManager?.secondButton, for: .normal)
         }
     }
-
 }
