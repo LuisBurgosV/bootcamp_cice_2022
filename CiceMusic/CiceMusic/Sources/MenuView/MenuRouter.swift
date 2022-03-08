@@ -30,6 +30,8 @@ import MessageUI
 protocol MenuRouterInputProtocol {
     func canSendMail(delegate: MFMailComposeViewControllerDelegate)
     func showCustomAlert(delegate: AlertDefaultViewControllerDelegate?, model: CustomAlertManager)
+    func showGenericWebView()
+    func showTipsTrainingView()
 }
 
 final class MenuRouter: BaseRouter<MenuViewController> {
@@ -59,6 +61,20 @@ extension MenuRouter: MenuRouterInputProtocol {
     func canSendMail(delegate: MFMailComposeViewControllerDelegate) {
         DispatchQueue.main.async {
             self.viewController?.present(Utils.configuracionMailCompose(delegate: delegate, data: []), animated: true, completion: nil)
+        }
+    }
+    
+    func showGenericWebView() {
+        DispatchQueue.main.async {
+            let vc = GenericWebCoordinator.navigation()
+            self.viewController?.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    func showTipsTrainingView() {
+        DispatchQueue.main.async {
+            let vc = TipsTrainingCoordinator.navigation()
+            self.viewController?.present(vc, animated: true, completion: nil)
         }
     }
 }

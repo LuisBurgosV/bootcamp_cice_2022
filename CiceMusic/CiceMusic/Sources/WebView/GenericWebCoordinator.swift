@@ -14,7 +14,7 @@ final class GenericWebCoordinator {
         return navVC
     }
     
-    static func view() -> UIViewController & GenericWebOutputPresenterProtocol {
+    static func view() -> GenericWebViewController & GenericWebOutputPresenterProtocol {
         let vc = GenericWebViewController()
         vc.presenter = presenter(vc: vc)
         return vc

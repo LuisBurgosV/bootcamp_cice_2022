@@ -63,7 +63,7 @@ extension MenuPresenter: MenuPresenterInputProtocol {
     }
     
     func showTipsViewController() {
-        
+        self.router?.showTipsTrainingView()
     }
     
     func sendMail(canSendMail: Bool, delegate: MFMailComposeViewControllerDelegate) {
@@ -99,7 +99,7 @@ extension MenuPresenter: MenuInteractorOutputProtocol {
 
 extension MenuPresenter: AlertDefaultViewControllerDelegate {
     func primaryButtonPressed() {
-        //
+        self.router?.showGenericWebView()
     }
     func secondButtonPressed() {
         //

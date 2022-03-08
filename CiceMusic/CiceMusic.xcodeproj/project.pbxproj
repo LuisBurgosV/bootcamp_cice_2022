@@ -12,6 +12,9 @@
 		0B086F7027D13F7E005295E5 /* AlertDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B086F6E27D13F7E005295E5 /* AlertDefaultViewController.xib */; };
 		0B086F7327D146BA005295E5 /* CustomAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B086F7227D146BA005295E5 /* CustomAlertManager.swift */; };
 		0B086F7527D14842005295E5 /* LocalizedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B086F7427D14841005295E5 /* LocalizedKeys.swift */; };
+		0B09B1D927D7D6A7001D2CF1 /* TipsServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B09B1D827D7D6A7001D2CF1 /* TipsServerModel.swift */; };
+		0B09B1DD27D7DB8D001D2CF1 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B09B1DB27D7DB8D001D2CF1 /* TipsCell.swift */; };
+		0B09B1DE27D7DB8D001D2CF1 /* TipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B09B1DC27D7DB8D001D2CF1 /* TipsCell.xib */; };
 		0B2CFC9F27CD643A000D45F3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2CFC9827CD643A000D45F3 /* LoginViewController.xib */; };
 		0B2CFCA027CD643A000D45F3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2CFC9927CD643A000D45F3 /* LoginViewController.swift */; };
 		0B2CFCA127CD643A000D45F3 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2CFC9A27CD643A000D45F3 /* LoginRouter.swift */; };
@@ -38,6 +41,13 @@
 		0BCF370F27C256BD00F24964 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0BCF370E27C256BD00F24964 /* Kingfisher */; };
 		0BD9353527C40A9C0096D9DF /* PodcastServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD9353427C40A9C0096D9DF /* PodcastServerModel.swift */; };
 		0BD9353827C40EE50096D9DF /* AppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD9353727C40EE50096D9DF /* AppleViewModel.swift */; };
+		0BDA4ECA27D4E5B600B39E07 /* TipsTrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BDA4EC327D4E5B600B39E07 /* TipsTrainingViewController.xib */; };
+		0BDA4ECB27D4E5B600B39E07 /* TipsTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA4EC427D4E5B600B39E07 /* TipsTrainingViewController.swift */; };
+		0BDA4ECC27D4E5B600B39E07 /* TipsTrainingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA4EC527D4E5B600B39E07 /* TipsTrainingRouter.swift */; };
+		0BDA4ECD27D4E5B600B39E07 /* TipsTrainingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA4EC627D4E5B600B39E07 /* TipsTrainingProvider.swift */; };
+		0BDA4ECE27D4E5B600B39E07 /* TipsTrainingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA4EC727D4E5B600B39E07 /* TipsTrainingCoordinator.swift */; };
+		0BDA4ECF27D4E5B600B39E07 /* TipsTrainingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA4EC827D4E5B600B39E07 /* TipsTrainingPresenter.swift */; };
+		0BDA4ED027D4E5B600B39E07 /* TipsTrainingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA4EC927D4E5B600B39E07 /* TipsTrainingInteractor.swift */; };
 		0BDA6C0627C10406000E45ED /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BDA6BFF27C10406000E45ED /* MusicViewController.xib */; };
 		0BDA6C0727C10406000E45ED /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6C0027C10406000E45ED /* MusicViewController.swift */; };
 		0BDA6C0827C10406000E45ED /* MusicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6C0127C10406000E45ED /* MusicRouter.swift */; };
@@ -101,6 +111,9 @@
 		0B086F6E27D13F7E005295E5 /* AlertDefaultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertDefaultViewController.xib; sourceTree = "<group>"; };
 		0B086F7227D146BA005295E5 /* CustomAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertManager.swift; sourceTree = "<group>"; };
 		0B086F7427D14841005295E5 /* LocalizedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeys.swift; sourceTree = "<group>"; };
+		0B09B1D827D7D6A7001D2CF1 /* TipsServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsServerModel.swift; sourceTree = "<group>"; };
+		0B09B1DB27D7DB8D001D2CF1 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
+		0B09B1DC27D7DB8D001D2CF1 /* TipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsCell.xib; sourceTree = "<group>"; };
 		0B2CFC9827CD643A000D45F3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		0B2CFC9927CD643A000D45F3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B2CFC9A27CD643A000D45F3 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -128,6 +141,13 @@
 		0BCF370A27C2513000F24964 /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
 		0BD9353427C40A9C0096D9DF /* PodcastServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastServerModel.swift; sourceTree = "<group>"; };
 		0BD9353727C40EE50096D9DF /* AppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleViewModel.swift; sourceTree = "<group>"; };
+		0BDA4EC327D4E5B600B39E07 /* TipsTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsTrainingViewController.xib; sourceTree = "<group>"; };
+		0BDA4EC427D4E5B600B39E07 /* TipsTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingViewController.swift; sourceTree = "<group>"; };
+		0BDA4EC527D4E5B600B39E07 /* TipsTrainingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingRouter.swift; sourceTree = "<group>"; };
+		0BDA4EC627D4E5B600B39E07 /* TipsTrainingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingProvider.swift; sourceTree = "<group>"; };
+		0BDA4EC727D4E5B600B39E07 /* TipsTrainingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingCoordinator.swift; sourceTree = "<group>"; };
+		0BDA4EC827D4E5B600B39E07 /* TipsTrainingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingPresenter.swift; sourceTree = "<group>"; };
+		0BDA4EC927D4E5B600B39E07 /* TipsTrainingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingInteractor.swift; sourceTree = "<group>"; };
 		0BDA6BFF27C10406000E45ED /* MusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
 		0BDA6C0027C10406000E45ED /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		0BDA6C0127C10406000E45ED /* MusicRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRouter.swift; sourceTree = "<group>"; };
@@ -230,6 +250,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		0B09B1DA27D7DB6C001D2CF1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0B09B1DB27D7DB8D001D2CF1 /* TipsCell.swift */,
+				0B09B1DC27D7DB8D001D2CF1 /* TipsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		0B2CFC9727CD63D7000D45F3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +339,7 @@
 		0B6986F427BD7BF7009D24F8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0BDA4EC227D4E59300B39E07 /* TipsTraining */,
 				0BF5AB1527D3793B0021CEEF /* WebView */,
 				0B2CFC9727CD63D7000D45F3 /* Login */,
 				0BF7E98627CA3EAA002DE8A6 /* MenuView */,
@@ -352,6 +382,21 @@
 				0BD9353727C40EE50096D9DF /* AppleViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0BDA4EC227D4E59300B39E07 /* TipsTraining */ = {
+			isa = PBXGroup;
+			children = (
+				0B09B1DA27D7DB6C001D2CF1 /* Cell */,
+				0BDA4EC327D4E5B600B39E07 /* TipsTrainingViewController.xib */,
+				0BDA4EC427D4E5B600B39E07 /* TipsTrainingViewController.swift */,
+				0BDA4EC527D4E5B600B39E07 /* TipsTrainingRouter.swift */,
+				0BDA4EC627D4E5B600B39E07 /* TipsTrainingProvider.swift */,
+				0BDA4EC727D4E5B600B39E07 /* TipsTrainingCoordinator.swift */,
+				0BDA4EC827D4E5B600B39E07 /* TipsTrainingPresenter.swift */,
+				0BDA4EC927D4E5B600B39E07 /* TipsTrainingInteractor.swift */,
+			);
+			path = TipsTraining;
 			sourceTree = "<group>";
 		};
 		0BDA6BFB27C103A9000E45ED /* HomeTabBar */ = {
@@ -431,6 +476,7 @@
 				0BD9353427C40A9C0096D9DF /* PodcastServerModel.swift */,
 				0BEDA7EA27C9635400AD4961 /* AppServerModel.swift */,
 				0B442FC927CB8B1800F87707 /* MenuServerModel.swift */,
+				0B09B1D827D7D6A7001D2CF1 /* TipsServerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -577,7 +623,9 @@
 				0BF7E98E27CA3F0C002DE8A6 /* MenuViewController.xib in Resources */,
 				0B2CFC9F27CD643A000D45F3 /* LoginViewController.xib in Resources */,
 				0BEDA7E327C94B4800AD4961 /* AppleGenericDetailViewController.xib in Resources */,
+				0BDA4ECA27D4E5B600B39E07 /* TipsTrainingViewController.xib in Resources */,
 				0BDA6C2C27C106E8000E45ED /* HomeTabBarViewController.xib in Resources */,
+				0B09B1DE27D7DB8D001D2CF1 /* TipsCell.xib in Resources */,
 				0BCF370C27C2513000F24964 /* MusicCell.xib in Resources */,
 				0B086F7027D13F7E005295E5 /* AlertDefaultViewController.xib in Resources */,
 			);
@@ -590,14 +638,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B09B1D927D7D6A7001D2CF1 /* TipsServerModel.swift in Sources */,
 				0B2CFCA027CD643A000D45F3 /* LoginViewController.swift in Sources */,
 				0BE4F8FE27BEE390008017AB /* AppleServerModel.swift in Sources */,
 				0B6986DB27BD74D7009D24F8 /* AppDelegate.swift in Sources */,
 				0B442FCE27CBAAF100F87707 /* MenuCell.swift in Sources */,
 				0BE4F8FB27BED9A1008017AB /* SplashProvider.swift in Sources */,
 				0BDA6C1827C10416000E45ED /* PodcastCoordinator.swift in Sources */,
+				0B09B1DD27D7DB8D001D2CF1 /* TipsCell.swift in Sources */,
 				0BEDA7E527C94B4800AD4961 /* AppleGenericDetailRouter.swift in Sources */,
 				0BF5AB1B27D379950021CEEF /* GenericWebPresenter.swift in Sources */,
+				0BDA4ECF27D4E5B600B39E07 /* TipsTrainingPresenter.swift in Sources */,
 				0BDA6C1727C10416000E45ED /* PodcastProvider.swift in Sources */,
 				0B2CFCA127CD643A000D45F3 /* LoginRouter.swift in Sources */,
 				0B69870127BD82AC009D24F8 /* SplashCoordinator.swift in Sources */,
@@ -607,12 +658,14 @@
 				0B2CFCA527CD643A000D45F3 /* LoginInteractor.swift in Sources */,
 				0BDA6C2627C10446000E45ED /* BookCoordinator.swift in Sources */,
 				0BEDA7E927C94B4800AD4961 /* AppleGenericDetailInteractor.swift in Sources */,
+				0BDA4ECE27D4E5B600B39E07 /* TipsTrainingCoordinator.swift in Sources */,
 				0BDA6C1927C10416000E45ED /* PodcastPresenter.swift in Sources */,
 				0BF7E99327CA3F0C002DE8A6 /* MenuPresenter.swift in Sources */,
 				0B6986FF27BD7DF0009D24F8 /* SplashRouter.swift in Sources */,
 				0B2CFCA427CD643A000D45F3 /* LoginPresenter.swift in Sources */,
 				0B2CFCA327CD643A000D45F3 /* LoginCoordinator.swift in Sources */,
 				0BDA6C2327C10446000E45ED /* BookViewController.swift in Sources */,
+				0BDA4ED027D4E5B600B39E07 /* TipsTrainingInteractor.swift in Sources */,
 				0BEDA7E427C94B4800AD4961 /* AppleGenericDetailViewController.swift in Sources */,
 				0BE4F8F427BECE44008017AB /* NetworkService.swift in Sources */,
 				0BF5AB1827D379730021CEEF /* GenericWebViewController.swift in Sources */,
@@ -620,6 +673,7 @@
 				0B086F7327D146BA005295E5 /* CustomAlertManager.swift in Sources */,
 				0BDA6C2B27C106E8000E45ED /* HomeTabBarViewController.swift in Sources */,
 				0BDA6C1527C10416000E45ED /* PodcastViewController.swift in Sources */,
+				0BDA4ECB27D4E5B600B39E07 /* TipsTrainingViewController.swift in Sources */,
 				0B6986FB27BD7C77009D24F8 /* SplashPresenter.swift in Sources */,
 				0BDA6C2427C10446000E45ED /* BookRouter.swift in Sources */,
 				0BEDA7E727C94B4800AD4961 /* AppleGenericDetailCoordinator.swift in Sources */,
@@ -629,6 +683,8 @@
 				0BF7E99427CA3F0C002DE8A6 /* MenuInteractor.swift in Sources */,
 				0BDA6C1627C10416000E45ED /* PodcastRouter.swift in Sources */,
 				0B442FCA27CB8B1800F87707 /* MenuServerModel.swift in Sources */,
+				0BDA4ECD27D4E5B600B39E07 /* TipsTrainingProvider.swift in Sources */,
+				0BDA4ECC27D4E5B600B39E07 /* TipsTrainingRouter.swift in Sources */,
 				0BDA6C0A27C10406000E45ED /* MusicCoordinator.swift in Sources */,
 				0BDA6C0827C10406000E45ED /* MusicRouter.swift in Sources */,
 				0BDA6C0C27C10406000E45ED /* MusicInteractor.swift in Sources */,
