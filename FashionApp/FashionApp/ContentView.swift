@@ -360,6 +360,61 @@ struct CurvesAnimationsView: View {
     }
 }
 
+struct CurvesAnimationsViewDos: View {
+    
+    @State private var change = false
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Esta es otra prueba").font(.largeTitle)
+            Text("Vamos a probar con mas animaciones").font(.callout)
+            Spacer()
+            HStack {
+                Spacer()
+                Circle()
+                    .foregroundColor(.orange)
+                    .frame(width: 100, height: 100)
+                    .offset(x: self.change ? -250 : 0, y: self.change ? -450 : 0)
+                    .animation(.easeInOut, value: self.change)
+            }
+            
+            Button("Change") {
+                self.change.toggle()
+            }
+        }
+    }
+}
+
+struct MenuAnimationView: View {
+    var body: some View {
+        ZStack(alignment: .bottomTrailing) {
+            VStack(spacing: 20) {
+                Text("Menu Flotante").font(.title)
+                Text("Como les gusta a los Android").font(.callout)
+                Spacer()
+            }
+            
+            Group {
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "bag.badge.plus")
+                        .foregroundColor(.white)
+                        .padding(24)
+                        .rotationEffect(Angle.degrees(0))
+                })
+                .background(
+                    Circle()
+                        .fill(Color.green)
+                        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 4, y: 4)
+                )
+                .offset(x: 0, y: 0)
+                .opacity(1)
+            }
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -372,7 +427,9 @@ struct ContentView_Previews: PreviewProvider {
             //HStackPriorityView()
             //IntroZStackView()
             //BasicChangedCircle()
-            CurvesAnimationsView()
+            //CurvesAnimationsView()
+            //CurvesAnimationsViewDos().preferredColorScheme(.dark)
+            MenuAnimationView()
         }
     }
 }
