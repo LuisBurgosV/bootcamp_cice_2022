@@ -11,6 +11,7 @@ struct CustomNavigationView: View {
     
     @State private var showAlert = false
     @State private var showAlertDos = false
+    @Binding var showAlertTres: Bool
     
     var body: some View {
         ZStack {
@@ -41,6 +42,7 @@ struct CustomNavigationView: View {
                 
                 Button(action: {
                     //Aqui la accion
+                    self.showAlertTres.toggle()
                 }, label: {
                     Image(systemName: "alarm")
                 })
@@ -55,6 +57,6 @@ struct CustomNavigationView: View {
 
 struct CustomNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomNavigationView()
+        CustomNavigationView(showAlertTres: .constant(false))
     }
 }

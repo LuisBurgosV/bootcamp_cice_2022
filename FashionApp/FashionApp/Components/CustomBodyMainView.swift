@@ -60,7 +60,6 @@ struct CustomBodyMainView: View {
                     }
                 }
             }
-            
             detailLazyGridScrollView
         }
     }
@@ -70,11 +69,17 @@ struct CustomBodyMainView: View {
             ForEach(customData) { item in
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 2), content: {
                     ForEach(item.myRows) { itemRow in
-                        CardCell(model: itemRow)
+                        NavigationLink(
+                            destination: DetailFashionView(model: itemRow),
+                            label: {
+                                CardCell(model: itemRow)
+                            })
+                            .buttonStyle(PlainButtonStyle())
                     }
                 })
             }
         })
+        .padding(.horizontal, 8)
     }
 }
 
