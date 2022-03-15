@@ -16,6 +16,11 @@
 		0BD76BF627E11B1F00FCF41A /* MoviesModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BD76BF527E11B1F00FCF41A /* MoviesModel.json */; };
 		0BD76BF827E11F5700FCF41A /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD76BF727E11F5700FCF41A /* Obfuscator.swift */; };
 		0BD76BFA27E1200C00FCF41A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD76BF927E1200C00FCF41A /* Constants.swift */; };
+		0BFE899827E139C900A4416D /* MoviesServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE899727E139C900A4416D /* MoviesServerModel.swift */; };
+		0BFE899E27E13ED500A4416D /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE899D27E13ED500A4416D /* MoviesViewModel.swift */; };
+		0BFE89A027E13F2800A4416D /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE899F27E13F2800A4416D /* MoviesView.swift */; };
+		0BFE89A227E1418100A4416D /* MoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE89A127E1418100A4416D /* MoviesInteractor.swift */; };
+		0BFE89A427E1443D00A4416D /* MoviesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE89A327E1443D00A4416D /* MoviesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		0BD76BF527E11B1F00FCF41A /* MoviesModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MoviesModel.json; sourceTree = "<group>"; };
 		0BD76BF727E11F5700FCF41A /* Obfuscator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
 		0BD76BF927E1200C00FCF41A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0BFE899727E139C900A4416D /* MoviesServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesServerModel.swift; sourceTree = "<group>"; };
+		0BFE899D27E13ED500A4416D /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		0BFE899F27E13F2800A4416D /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
+		0BFE89A127E1418100A4416D /* MoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractor.swift; sourceTree = "<group>"; };
+		0BFE89A327E1443D00A4416D /* MoviesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,7 @@
 		0BD76BDB27E10E6F00FCF41A /* CiceTmdbApp */ = {
 			isa = PBXGroup;
 			children = (
+				0BFE899927E13D8600A4416D /* Sources */,
 				0BD76C1D27E1254000FCF41A /* ServerModel */,
 				0BD76BF227E1193000FCF41A /* Resources */,
 				0BD76BEF27E115B300FCF41A /* Utils+Helpers */,
@@ -120,8 +131,28 @@
 		0BD76C1D27E1254000FCF41A /* ServerModel */ = {
 			isa = PBXGroup;
 			children = (
+				0BFE899727E139C900A4416D /* MoviesServerModel.swift */,
 			);
 			path = ServerModel;
+			sourceTree = "<group>";
+		};
+		0BFE899927E13D8600A4416D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0BFE899A27E13D9200A4416D /* MoviesView */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0BFE899A27E13D9200A4416D /* MoviesView */ = {
+			isa = PBXGroup;
+			children = (
+				0BFE899F27E13F2800A4416D /* MoviesView.swift */,
+				0BFE899D27E13ED500A4416D /* MoviesViewModel.swift */,
+				0BFE89A127E1418100A4416D /* MoviesInteractor.swift */,
+				0BFE89A327E1443D00A4416D /* MoviesProvider.swift */,
+			);
+			path = MoviesView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +225,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BFE899827E139C900A4416D /* MoviesServerModel.swift in Sources */,
+				0BFE89A427E1443D00A4416D /* MoviesProvider.swift in Sources */,
 				0BD76BDF27E10E6F00FCF41A /* ContentView.swift in Sources */,
 				0BD76BDD27E10E6F00FCF41A /* CiceTmdbAppApp.swift in Sources */,
+				0BFE89A227E1418100A4416D /* MoviesInteractor.swift in Sources */,
 				0BD76BED27E10EF400FCF41A /* BaseVIP.swift in Sources */,
+				0BFE899E27E13ED500A4416D /* MoviesViewModel.swift in Sources */,
 				0BD76BF127E115C100FCF41A /* Utils.swift in Sources */,
 				0BD76BF827E11F5700FCF41A /* Obfuscator.swift in Sources */,
+				0BFE89A027E13F2800A4416D /* MoviesView.swift in Sources */,
 				0BD76BFA27E1200C00FCF41A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
