@@ -13,15 +13,28 @@ struct DetailFashionView: View {
     @State private var mySize = ""
     @SwiftUI.Environment(\.presentationMode) var presenterMode
     
+    @State private var showCustomAlertView = false
+    @State private var showActionSheet = false
+    @State private var showAlert = false
+    
+    
     var body: some View {
-        ScrollView {
-            VStack {
-                headerInformation
-                bodyInformation
+        ZStack {
+            ScrollView {
+                VStack {
+                    headerInformation
+                    bodyInformation
+                }
+            }
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            
+            if showCustomAlertView {
+                CustomAlertView(title: "Enhorabuena!",
+                                message: "Tu seleccion se ha añadido al carrito de compras.",
+                                hideCustomAlertView: self.$showCustomAlertView)
             }
         }
-        .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true)
     }
     var headerInformation: some View {
         ZStack(alignment: .topLeading) {
@@ -43,17 +56,35 @@ struct DetailFashionView: View {
                     
                     Button(action: {
                         //accion
+                        self.showAlert.toggle()
                     }, label: {
                         Image(systemName: "magnifyingglass")
                     })
                     .offset(x: proxy.size.width - 80, y: 25)
+                    .alert(isPresented: self.$showAlert, content: {
+                        Alert(title: Text("Hola soy un Alert de SwiftUI"), message: Text("Aqui estamos aprendiendo como se hace un Alert en SwiftUI"), primaryButton: .default(Text("OK"), action: {
+                            //Aqui acciones
+                        }), secondaryButton: .cancel(Text("Cancel"), action: {
+                            //Aqui acciones
+                        }))
+                    })
                     
                     Button(action: {
                         //accion
+                        self.showActionSheet.toggle()
                     }, label: {
                         Image(systemName: "cart")
                     })
                     .offset(x: proxy.size.width - 40, y: 25)
+                    .actionSheet(isPresented: self.$showActionSheet, content: {
+                        ActionSheet(title: Text("A question"), message: Text("Are you sure?"), buttons: [
+                            .default(Text("Yes")) {/*accion*/},
+                            .default(Text("No")) {/*accion*/},
+                            .default(Text("Maybe")) {/*accion*/},
+                            .destructive(Text("Delete")) {/*accion*/},
+                            .cancel() {/*accion*/}
+                        ])
+                    })
                 }
             }
             .foregroundColor(.black)
@@ -110,6 +141,7 @@ struct DetailFashionView: View {
                 
                 Button(action: {
                     //accion
+                    self.showCustomAlertView.toggle()
                 }, label: {
                     Text("Buy Now")
                         .padding()
@@ -123,7 +155,7 @@ struct DetailFashionView: View {
         .background(
             roudedShape()
                 .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: -50)
+                .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: -30)
         )
         .padding(.top, -40)
     }
