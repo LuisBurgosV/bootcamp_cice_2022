@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2DDB7527E259BD00EF0F59 /* MoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2DDB7427E259BD00EF0F59 /* MoviesCoordinator.swift */; };
+		0B2DDB7827E2622500EF0F59 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2DDB7727E2622500EF0F59 /* NetworkService.swift */; };
+		0B2DDB7A27E2634F00EF0F59 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2DDB7927E2634F00EF0F59 /* NetworkError.swift */; };
 		0BD76BDD27E10E6F00FCF41A /* CiceTmdbAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD76BDC27E10E6F00FCF41A /* CiceTmdbAppApp.swift */; };
 		0BD76BDF27E10E6F00FCF41A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD76BDE27E10E6F00FCF41A /* ContentView.swift */; };
 		0BD76BE127E10E7100FCF41A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD76BE027E10E7100FCF41A /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2DDB7427E259BD00EF0F59 /* MoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCoordinator.swift; sourceTree = "<group>"; };
+		0B2DDB7727E2622500EF0F59 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0B2DDB7927E2634F00EF0F59 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0BD76BD927E10E6F00FCF41A /* CiceTmdbApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceTmdbApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BD76BDC27E10E6F00FCF41A /* CiceTmdbAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiceTmdbAppApp.swift; sourceTree = "<group>"; };
 		0BD76BDE27E10E6F00FCF41A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2DDB7627E2621000EF0F59 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				0B2DDB7727E2622500EF0F59 /* NetworkService.swift */,
+				0B2DDB7927E2634F00EF0F59 /* NetworkError.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
 		0BD76BD027E10E6F00FCF41A = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +87,7 @@
 		0BD76BDB27E10E6F00FCF41A /* CiceTmdbApp */ = {
 			isa = PBXGroup;
 			children = (
+				0B2DDB7627E2621000EF0F59 /* WebService */,
 				0BFE899927E13D8600A4416D /* Sources */,
 				0BD76C1D27E1254000FCF41A /* ServerModel */,
 				0BD76BF227E1193000FCF41A /* Resources */,
@@ -151,6 +167,7 @@
 				0BFE899D27E13ED500A4416D /* MoviesViewModel.swift */,
 				0BFE89A127E1418100A4416D /* MoviesInteractor.swift */,
 				0BFE89A327E1443D00A4416D /* MoviesProvider.swift */,
+				0B2DDB7427E259BD00EF0F59 /* MoviesCoordinator.swift */,
 			);
 			path = MoviesView;
 			sourceTree = "<group>";
@@ -226,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BFE899827E139C900A4416D /* MoviesServerModel.swift in Sources */,
+				0B2DDB7A27E2634F00EF0F59 /* NetworkError.swift in Sources */,
 				0BFE89A427E1443D00A4416D /* MoviesProvider.swift in Sources */,
 				0BD76BDF27E10E6F00FCF41A /* ContentView.swift in Sources */,
 				0BD76BDD27E10E6F00FCF41A /* CiceTmdbAppApp.swift in Sources */,
@@ -234,7 +252,9 @@
 				0BFE899E27E13ED500A4416D /* MoviesViewModel.swift in Sources */,
 				0BD76BF127E115C100FCF41A /* Utils.swift in Sources */,
 				0BD76BF827E11F5700FCF41A /* Obfuscator.swift in Sources */,
+				0B2DDB7527E259BD00EF0F59 /* MoviesCoordinator.swift in Sources */,
 				0BFE89A027E13F2800A4416D /* MoviesView.swift in Sources */,
+				0B2DDB7827E2622500EF0F59 /* NetworkService.swift in Sources */,
 				0BD76BFA27E1200C00FCF41A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
