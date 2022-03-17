@@ -23,7 +23,7 @@ struct MoviesServerModel: Codable {
 }
 
 // MARK: - Result
-struct ResultNowPlaying: Codable {
+struct ResultNowPlaying: Codable, Identifiable {
     let adult: Bool?
     let backdropPath: String?
     let genreIDS: [Int]?

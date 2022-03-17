@@ -12,9 +12,15 @@ struct MoviesView: View {
     @StateObject var viewModel = MoviesViewModel()
     
     var body: some View {
-        VStack {
-            Text("2")
+        List {
+            Group {
+                if !self.viewModel.dataSourceNowPlaying.isEmpty {
+                    MoviesPosterCarrousel(title: "Now Playing", moviesModel: self.viewModel.dataSourceNowPlaying, isPoster: false)
+                }
+            }
         }
+        .listStyle(PlainListStyle())
+        .navigationTitle(Text("Movies"))
         .onAppear {
             self.viewModel.fetchData()
         }
