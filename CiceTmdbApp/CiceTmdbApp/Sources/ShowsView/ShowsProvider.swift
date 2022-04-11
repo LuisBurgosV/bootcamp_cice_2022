@@ -27,7 +27,10 @@ import Combine
 
 //Input protocol
 protocol ShowsProviderInputProtocol: BaseProviderInputProtocol {
-    
+    func fetchDataAiringTodayProvider()
+    func fetchDataOnTheAirProvider()
+    func fetchDataPopularProvider()
+    func fetchDataTopRatedProvider()
 }
 
 final class ShowsProvider: BaseProvider {
@@ -42,34 +45,95 @@ final class ShowsProvider: BaseProvider {
 }
 
 extension ShowsProvider: ShowsProviderInputProtocol {
-//    func fetchDataPopularProvider() {
-//        let request = RequestDTO(params: nil,
-//                                 method: .get,
-//                                 endpoint: URLEnpoint.endpointMoviesPopular,
-//                                 urlContext: .webService)
-//        self.networkService.requestGeneric(payloadRequest: request, entityClass: MoviesServerModel.self)
-//            .sink { [weak self] completion in
-//                guard self != nil else { return }
-//                switch completion {
-//                case .finished:
-//                    debugPrint("Finished")
-//                case let .failure(error):
-//                    self?.interactor?.setInformationPopular(completion: .failure(error))
-//                }
-//            } receiveValue: { [weak self] resultData in
-//                guard self != nil else { return }
-//                self?.interactor?.setInformationPopular(completion: .success(resultData.results))
-//            }
-//            .store(in: &cancellable)
-//    }
+    
+    func fetchDataAiringTodayProvider() {
+        self.networkService.requestGeneric(payloadRequest: ShowsRequestDTO.requestData(), entityClass: ShowsServerModel.self)
+                    .sink { [weak self] completion in
+                        guard self != nil else { return }
+                        switch completion {
+                        case .finished:
+                            debugPrint("Finished")
+                        case let .failure(error):
+                            self?.interactor?.setInformationAiringToday(completion: .failure(error))
+                        }
+                    } receiveValue: { [weak self] resultData in
+                        guard self != nil else { return }
+                        self?.interactor?.setInformationAiringToday(completion: .success(resultData.results))
+                    }
+                    .store(in: &cancellable)
+    }
+    
+    func fetchDataOnTheAirProvider() {
+        self.networkService.requestGeneric(payloadRequest: ShowsRequestDTO.requestDataOnTheAir(), entityClass: ShowsServerModel.self)
+                    .sink { [weak self] completion in
+                        guard self != nil else { return }
+                        switch completion {
+                        case .finished:
+                            debugPrint("Finished")
+                        case let .failure(error):
+                            self?.interactor?.setInformationOnTheAir(completion: .failure(error))
+                        }
+                    } receiveValue: { [weak self] resultData in
+                        guard self != nil else { return }
+                        self?.interactor?.setInformationOnTheAir(completion: .success(resultData.results))
+                    }
+                    .store(in: &cancellable)
+    }
+    
+    func fetchDataPopularProvider() {
+        self.networkService.requestGeneric(payloadRequest: ShowsRequestDTO.requestDataPopular(), entityClass: ShowsServerModel.self)
+                    .sink { [weak self] completion in
+                        guard self != nil else { return }
+                        switch completion {
+                        case .finished:
+                            debugPrint("Finished")
+                        case let .failure(error):
+                            self?.interactor?.setInformationPopular(completion: .failure(error))
+                        }
+                    } receiveValue: { [weak self] resultData in
+                        guard self != nil else { return }
+                        self?.interactor?.setInformationPopular(completion: .success(resultData.results))
+                    }
+                    .store(in: &cancellable)
+    }
+    
+    func fetchDataTopRatedProvider() {
+        self.networkService.requestGeneric(payloadRequest: ShowsRequestDTO.requestDataTopRated(), entityClass: ShowsServerModel.self)
+                    .sink { [weak self] completion in
+                        guard self != nil else { return }
+                        switch completion {
+                        case .finished:
+                            debugPrint("Finished")
+                        case let .failure(error):
+                            self?.interactor?.setInformationTopRated(completion: .failure(error))
+                        }
+                    } receiveValue: { [weak self] resultData in
+                        guard self != nil else { return }
+                        self?.interactor?.setInformationTopRated(completion: .success(resultData.results))
+                    }
+                    .store(in: &cancellable)
+    }
 }
 
 struct ShowsRequestDTO {
     
-//    static func requestData(numeroItems: String) -> RequestDTO {
-//        let argument: [CVarArg] = [numeroItems]
-//        let urlComplete = String(format: URLEnpoint.music, arguments: argument)
-//        let request = RequestDTO(arrayParams: nil, method: .get, endpoint: urlComplete, urlContext: .webService)
-//        return request
-//    }
+    static func requestData() -> RequestDTO {
+        let request = RequestDTO(arrayParams: nil, method: .get, endpoint: URLEnpoint.endpointTVAiringToday, urlContext: .webService)
+        return request
+    }
+    
+    static func requestDataOnTheAir() -> RequestDTO {
+        let request = RequestDTO(arrayParams: nil, method: .get, endpoint: URLEnpoint.endpointTVOnTheAir, urlContext: .webService)
+        return request
+    }
+    
+    static func requestDataPopular() -> RequestDTO {
+        let request = RequestDTO(arrayParams: nil, method: .get, endpoint: URLEnpoint.endpointTVPopular, urlContext: .webService)
+        return request
+    }
+    
+    static func requestDataTopRated() -> RequestDTO {
+        let request = RequestDTO(arrayParams: nil, method: .get, endpoint: URLEnpoint.endpointTVTopRated, urlContext: .webService)
+        return request
+    }
 }

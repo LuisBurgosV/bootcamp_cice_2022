@@ -24,43 +24,22 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import SwiftUI
 
-struct ShowsView: View {
+struct DetailMovieView: View {
     
-    @StateObject var viewModel = ShowsViewModel()
+    @StateObject var viewModel = DetailMovieViewModel()
 
     var body: some View {
-        List {
-            Group {
-                if !self.viewModel.datasourceAiringToday.isEmpty {
-                    MoviesPosterCarrousel(title: "Airing Today", moviesModel: self.viewModel.datasourceAiringToday, isPoster: false)
-                }
-            }
-            Group {
-                if !self.viewModel.datasourceOnTheAir.isEmpty {
-                    MoviesPosterCarrousel(title: "On The Air", moviesModel: self.viewModel.datasourceOnTheAir, isPoster: false)
-                }
-            }
-            Group {
-                if !self.viewModel.datasourcePopular.isEmpty {
-                    MoviesPosterCarrousel(title: "Popular", moviesModel: self.viewModel.datasourcePopular, isPoster: false)
-                }
-            }
-            Group {
-                if !self.viewModel.datasourceTopRated.isEmpty {
-                    MoviesPosterCarrousel(title: "Top Rated", moviesModel: self.viewModel.datasourceTopRated, isPoster: false)
-                }
-            }
+        VStack {
+            Text("Hello DetailMovie")
         }
-        .listStyle(PlainListStyle())
-        .navigationTitle(Text("Shows"))
         .onAppear {
             self.viewModel.fetchData()
         }
     }
 }
 
-struct ShowsView_Previews: PreviewProvider {
+struct DetailMovieView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowsView()
+        DetailMovieView()
     }
 }
